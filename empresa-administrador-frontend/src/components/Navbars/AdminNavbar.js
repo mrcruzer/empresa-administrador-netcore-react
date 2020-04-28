@@ -122,7 +122,7 @@ class AdminNavbar extends React.Component {
                     onClick={this.toggleModalSearch}
                   >
                     <i className="tim-icons icon-zoom-split" />
-                    <span className="d-lg-none d-md-block">Search</span>
+                    <span className="d-lg-none d-md-block">Buscar</span>
                   </Button>
                 </InputGroup>
                 <UncontrolledDropdown nav>
@@ -176,18 +176,18 @@ class AdminNavbar extends React.Component {
                       <img alt="..." src={require("assets/img/anime3.png")} />
                     </div>
                     <b className="caret d-none d-lg-block d-xl-block" />
-                    <p className="d-lg-none">Log out</p>
+                    <p className="d-lg-none">Desloguearse</p>
                   </DropdownToggle>
                   <DropdownMenu className="dropdown-navbar" right tag="ul">
                     <NavLink tag="li">
-                      <DropdownItem className="nav-item">Profile</DropdownItem>
+                      <DropdownItem className="nav-item">Perfil</DropdownItem>
                     </NavLink>
                     <NavLink tag="li">
-                      <DropdownItem className="nav-item">Settings</DropdownItem>
+                      <DropdownItem className="nav-item">Configuracion</DropdownItem>
                     </NavLink>
                     <DropdownItem divider tag="li" />
                     <NavLink tag="li">
-                      <DropdownItem className="nav-item">Log out</DropdownItem>
+                      <DropdownItem className="nav-item">Desloguearse</DropdownItem>
                     </NavLink>
                   </DropdownMenu>
                 </UncontrolledDropdown>
@@ -202,7 +202,7 @@ class AdminNavbar extends React.Component {
           toggle={this.toggleModalSearch}
         >
           <div className="modal-header">
-            <Input id="inlineFormInputGroup" placeholder="SEARCH" type="text" />
+            <Input id="inlineFormInputGroup" placeholder="BUSCAR" type="text" />
             <button
               aria-label="Close"
               className="close"

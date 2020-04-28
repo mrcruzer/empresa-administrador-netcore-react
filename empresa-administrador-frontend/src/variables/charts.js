@@ -71,18 +71,18 @@ let chartExample1 = {
 
     return {
       labels: [
-        "JAN",
+        "ENE",
         "FEB",
         "MAR",
-        "APR",
+        "ABRI",
         "MAY",
         "JUN",
         "JUL",
-        "AUG",
+        "AGO",
         "SEP",
         "OCT",
         "NOV",
-        "DEC"
+        "DIC"
       ],
       datasets: [
         {
@@ -116,18 +116,18 @@ let chartExample1 = {
 
     return {
       labels: [
-        "JAN",
+        "ENE",
         "FEB",
         "MAR",
-        "APR",
+        "ABRI",
         "MAY",
         "JUN",
         "JUL",
-        "AUG",
+        "AGO",
         "SEP",
         "OCT",
         "NOV",
-        "DEC"
+        "DIC"
       ],
       datasets: [
         {
@@ -161,18 +161,18 @@ let chartExample1 = {
 
     return {
       labels: [
-        "JAN",
+        "ENE",
         "FEB",
         "MAR",
-        "APR",
+        "ABRI",
         "MAY",
         "JUN",
         "JUL",
-        "AUG",
+        "AGO",
         "SEP",
         "OCT",
         "NOV",
-        "DEC"
+        "DIC"
       ],
       datasets: [
         {
