@@ -3,10 +3,10 @@ import Dashboard from "views/Dashboard.js";
 import Icons from "views/Icons.js";
 import Map from "views/Map.js";
 import Notifications from "views/Notifications.js";
-import TableList from "views/TableList.js";
 import Typography from "views/Typography.js";
 import UserProfile from "views/UserProfile.js";
 import EmpleadoList from './components/Empleado/EmpleadoList.js';
+import EmpleadoAdd from "./components/Empleado/EmpleadoAdd.js";
 
 var routes = [
   {
@@ -23,7 +23,11 @@ var routes = [
     icon: "tim-icons icon-pin",
     component: EmpleadoList,
     layout: "/admin"
-
+  },
+  {
+    path: '/empleado-add',
+    component: EmpleadoAdd,
+    layout: "/admin"
   },
   {
     path: "/icons",
@@ -51,13 +55,6 @@ var routes = [
     name: "User Profile",
     icon: "tim-icons icon-single-02",
     component: UserProfile,
-    layout: "/admin"
-  },
-  {
-    path: "/tables",
-    name: "Table List",
-    icon: "tim-icons icon-puzzle-10",
-    component: TableList,
     layout: "/admin"
   },
   {

@@ -2,7 +2,13 @@ import React, {useState, useEffect } from "react";
 
 import axios from "axios";
 
-//import withRouter from "react-router-dom";
+//import EmpleadoAdd from './EmpleadoAdd';
+
+import Popup from "reactjs-popup";
+
+import { withRouter }  from "react-router-dom";
+
+import EmpleadoAdd from "./EmpleadoAdd";
 
 // reactstrap components
 import {
@@ -12,10 +18,15 @@ import {
   CardTitle,
   Table,
   Row,
-  Col
+  Col,
+  Button,
+  Modal, 
+  ModalHeader, 
+  ModalBody, 
+  ModalFooter
 } from "reactstrap";
 
-function EmpleadoList()  {
+function EmpleadoList(props)  {
 
     const [datos, asignarDatos] = useState([]);
 
@@ -31,6 +42,10 @@ function EmpleadoList()  {
         obtenerDatos();
     },[]);
 
+    const [modal, setModal] = useState(false);
+
+    const toggle = () => setModal(!modal);
+
   
 
 
@@ -44,6 +59,10 @@ function EmpleadoList()  {
                 <CardHeader>
                   <CardTitle tag="h4">Lista De Empleados</CardTitle>
                 </CardHeader>
+                <Button className="warning" onClick={toggle}></Button>
+         
+        
+   
                 <CardBody>
                   <Table className="tablesorter" responsive>
                     <thead className="text-primary">
@@ -86,4 +105,4 @@ function EmpleadoList()  {
   }
 
 
-export default EmpleadoList;
+export default withRouter(EmpleadoList);

@@ -30,24 +30,6 @@ class AdminNavbar extends React.Component {
       color: "navbar-transparent"
     };
   }
-  componentDidMount() {
-    window.addEventListener("resize", this.updateColor);
-  }
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateColor);
-  }
-  // function that adds color white/transparent to the navbar on resize (this is for the collapse)
-  updateColor = () => {
-    if (window.innerWidth < 993 && this.state.collapseOpen) {
-      this.setState({
-        color: "bg-white"
-      });
-    } else {
-      this.setState({
-        color: "navbar-transparent"
-      });
-    }
-  };
   // this function opens and closes the collapse on small devices
   toggleCollapse = () => {
     if (this.state.collapseOpen) {
