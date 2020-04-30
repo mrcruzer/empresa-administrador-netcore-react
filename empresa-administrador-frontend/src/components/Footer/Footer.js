@@ -7,37 +7,36 @@ import PropTypes from "prop-types";
 // reactstrap components
 import { Container, Row, Nav, NavItem, NavLink } from "reactstrap";
 
-class Footer extends React.Component {
-  render() {
-    return (
-      <footer className="footer">
-        <Container fluid>
-          <Nav>
-            <NavItem>
-              <NavLink href="#">Inicio</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="">Sobre Nosotros</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#">Blog</NavLink>
-            </NavItem>
-          </Nav>
-          <div className="copyright">
-            © {new Date().getFullYear()} {" "}
-            <i className="tim-icons icon-heart-2" /> by{" "}
-            <a
-              href="#"
-              target="_blank"
-            >
-             
-            </a>{" "}
+
+function Footer() {
+  return (
+    <footer className="footer">
+      <Container fluid>
+        <Nav>
+          <NavItem>
+            <NavLink href="#">Inicio</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="">Sobre Nosotros</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#">Blog</NavLink>
+          </NavItem>
+        </Nav>
+        <div className="copyright">
+          © {new Date().getFullYear()} {" "}
+          <i className="tim-icons icon-heart-2" /> by{" "}
+          <a
+            href="#"
+            target="_blank"
+          >
            
-          </div>
-        </Container>
-      </footer>
-    );
-  }
+          </a>{" "}
+         
+        </div>
+      </Container>
+    </footer>
+  );
 }
 
 export default Footer;

@@ -18,6 +18,7 @@ var routes = [
   },
   // ruta de empleados
   {
+    // lista de empleados
     path: '/empleados',
     name: "Empleados",
     icon: "tim-icons icon-pin",
@@ -25,6 +26,7 @@ var routes = [
     layout: "/admin"
   },
   {
+    // agregar empleados
     path: '/empleado-add',
     component: EmpleadoAdd,
     layout: "/admin"
