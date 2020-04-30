@@ -9,7 +9,7 @@ import { PropTypes } from "prop-types";
 import PerfectScrollbar from "perfect-scrollbar";
 
 // reactstrap components
-import { Nav, NavLink as ReactstrapNavLink } from "reactstrap";
+import { Nav, NavItem, NavLink as ReactstrapNavLink } from "reactstrap";
 
 var ps;
 
@@ -39,7 +39,7 @@ class Sidebar extends React.Component {
     document.documentElement.classList.remove("nav-open");
   };
   render() {
-    const { bgColor, routes, rtlActive, logo } = this.props;
+    const { bgColor, routes, logo } = this.props;
     let logoImg = null;
     let logoText = null;
     if (logo !== undefined) {
@@ -98,7 +98,7 @@ class Sidebar extends React.Component {
               {logoText}
             </div>
           ) : null}
-          <Nav>
+          {/* <Nav>
             {routes.map((prop, key) => {
               if (prop.redirect) return null;
               return (
@@ -122,6 +122,32 @@ class Sidebar extends React.Component {
               );
             })}
            
+          </Nav> */}
+          <Nav>
+            <li>
+              <NavLink 
+                to={"/admin/dashboard"}
+                className="nav-link"
+                activeClassName="active"
+                onClick={this.props.toggleSidebar}
+                >
+                  <i className="tim-icons icon-chart-pie-36"/>
+                  <h5 className="simple-text">Dashboard</h5>
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink 
+                to={"/admin/empleados"}
+                className="nav-link"
+                activeClassName="active"
+                onClick={this.props.toggleSidebar}
+                >
+                  <i className="tim-icons icon-pin"/>
+                  <h5 className="simple-text">Empleados</h5>
+              </NavLink>
+            </li>
+
           </Nav>
         </div>
       </div>
