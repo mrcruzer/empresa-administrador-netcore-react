@@ -7,6 +7,7 @@ import Typography from "views/Typography.js";
 import UserProfile from "views/UserProfile.js";
 import EmpleadoList from './components/Empleado/EmpleadoList.js';
 import EmpleadoAdd from "./components/Empleado/EmpleadoAdd.js";
+import ModalEdit from "./components/Empleado/ModalEdit.js";
 
 var routes = [
   {
@@ -30,6 +31,11 @@ var routes = [
     path: '/empleado-add',
     component: EmpleadoAdd,
     layout: "/admin"
+  },
+  {
+  path: '/empleado-edit',
+  component: ModalEdit,
+  layout: "/admin"
   },
   {
     path: "/icons",

@@ -26,12 +26,14 @@ import {
   Modal, 
   ModalHeader, 
   ModalBody, 
-  ModalFooter 
+  ModalFooter, 
+  ModalTitle
 } from "reactstrap";
 
 function EmpleadoList(props)  {
 
     const [datos, asignarDatos] = useState([]);
+    const [cambio, asignarCambio] = useState('');
 
     const apiUrl = "https://localhost:44376/api/Empleado";
 
@@ -43,29 +45,32 @@ function EmpleadoList(props)  {
 
         };
         obtenerDatos();
+
+        //ModalEdit.toggle();
     },[]);
 
 
     
 
-    const [modal, setModal] = useState(false);
-
-    const toggle = () => setModal(!modal);
+   
 
   
     const editarEmpleado = (id) => {
-      
+      asignarCambio(id);
+      console.log("Editando Empleado" + cambio);
+    
       
     }
 
     const eliminarEmpleado = (id) => {
-      console.log("Eliminando Empleado" + id);
+      console.log("Eliminando Empleado " + id) ;
     }
 
     const addEmpleado = () => {
-      console.log("Agregando Empleado");
+      console.log("Agregando Empleado ");
     }
 
+    
 
 
   
@@ -108,11 +113,14 @@ function EmpleadoList(props)  {
                         <td>{item.posicion}</td>
                         <td>
                         <div className="btn-group">
-                                <Button className="btn-warning mr-1" data-toggle="modal" data-target="#exampleModal" onClick={() => editarEmpleado(item.id)}>Editar</Button>
-                                <Button type="button" className="btn-danger" onClick={() => eliminarEmpleado(item.id)}>Eliminar</Button>
+                                
+                                <ModalEdit item={item.id}/>
+                                <Button type="button" className="btn-danger mr-1" onClick={() => eliminarEmpleado(item.id)}>Eliminar</Button>
+                
                             </div>
                         </td>
                       </tr>
+                      
                       )}
                     </tbody>
                   </Table>
@@ -122,8 +130,9 @@ function EmpleadoList(props)  {
               <Button className="btn-primary" onClick={() => addEmpleado()}>Agregar Empleado</Button>
             </Col>
           </Row>
+        
 
-          <div>
+          {/* <div>
       <Button color="danger" onClick={toggle}>Hola</Button>
       <Modal isOpen={modal} toggle={toggle} className>
         <ModalHeader toggle={toggle}>Modal title</ModalHeader>
@@ -233,9 +242,9 @@ function EmpleadoList(props)  {
           <Button color="secondary" onClick={toggle}>Cancel</Button>
         </ModalFooter>
       </Modal>
-    </div>
+    </div> */}
 
-        </div>
+        </div> 
       </>
 
     );

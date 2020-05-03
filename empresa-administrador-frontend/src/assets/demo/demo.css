@@ -122,3 +122,13 @@
     content: ""; }
   .offline-doc .page-header:before {
     background-color: rgba(0, 0, 0, 0.8); }
+
+/* estilo de modal */
+    .special_modal .modal-content{
+      background-color: #2964E9;
+      color: #000;
+   }
+
+   .special_header .modal-content {
+     font-size: 16px;
+   }
