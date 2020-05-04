@@ -22,12 +22,7 @@ import {
   Table,
   Row,
   Col,
-  Button,
-  Modal, 
-  ModalHeader, 
-  ModalBody, 
-  ModalFooter, 
-  ModalTitle
+  Button
 } from "reactstrap";
 
 function EmpleadoList(props)  {
@@ -47,7 +42,7 @@ function EmpleadoList(props)  {
         obtenerDatos();
 
         //ModalEdit.toggle();
-    },[]);
+    },[datos]);
 
 
     
@@ -57,17 +52,13 @@ function EmpleadoList(props)  {
   
     const editarEmpleado = (id) => {
       asignarCambio(id);
-      console.log("Editando Empleado" + cambio);
+      //console.log("Editando Empleado" + cambio);
     
       
     }
 
     const eliminarEmpleado = (id) => {
       console.log("Eliminando Empleado " + id) ;
-    }
-
-    const addEmpleado = () => {
-      console.log("Agregando Empleado ");
     }
 
     
@@ -127,123 +118,9 @@ function EmpleadoList(props)  {
                  
                 </CardBody>
               </Card>
-              <Button className="btn-primary" onClick={() => addEmpleado()}>Agregar Empleado</Button>
+              <EmpleadoAdd />
             </Col>
           </Row>
-        
-
-          {/* <div>
-      <Button color="danger" onClick={toggle}>Hola</Button>
-      <Modal isOpen={modal} toggle={toggle} className>
-        <ModalHeader toggle={toggle}>Modal title</ModalHeader>
-        <ModalBody>
-        <p>
-                                <span className="modal-lable">Nombre:</span>
-                                    <input 
-                                        type="text" 
-                                        name="nombre"
-                                        id="nombre" 
-                                        placeholder="Nombre"
-                                        value={empleado.nombre}
-                                        onChange={onChange}
-                                    />
-                            </p>
-                            <p>
-                                <span className="modal-lable">Apellido:</span>
-                                    <input 
-                                        type="text" 
-                                        name="apellido"
-                                        id="apellido" 
-                                        placeholder="Apellido"
-                                        value={empleado.apellido}
-                                        onChange={onChange}
-                                    />
-                            </p>
-                            <p>
-                                <span className="modal-lable">Direccion:</span>
-                                    <input 
-                                        type="text" 
-                                        name="direccion"
-                                        id="direccion" 
-                                        placeholder="Direccion"
-                                        value={empleado.direccion}
-                                        onChange={onChange}
-                                    />
-                            </p>
-                            <p>
-                                <span className="modal-lable">Edad:</span>
-                                    <input 
-                                        type="text" 
-                                        name="edad"
-                                        id="edad" 
-                                        placeholder="Edad"
-                                        value={empleado.edad}
-                                        onChange={onChange}
-                                    />
-                            </p>
-                            <p>
-                                <span className="modal-lable">Nomina:</span>
-                                    <input 
-                                        type="text" 
-                                        name="nomina"
-                                        id="nomina" 
-                                        placeholder="Nomina"
-                                        value={empleado.nomina}
-                                        onChange={onChange}
-                                    />
-                            </p>
-                            <p>
-                                <span className="modal-lable">Tipo De Nomina:</span>
-                                    <input 
-                                        type="text" 
-                                        name="tipoNomina"
-                                        id="tipoNomina" 
-                                        placeholder="Tipo De Nomina"
-                                        value={empleado.tipoNomina}
-                                        onChange={onChange}
-                                    />
-                            </p>
-                            <p>
-                                <span className="modal-lable">Telefono:</span>
-                                    <input 
-                                        type="text" 
-                                        name="telefono"
-                                        id="telefono" 
-                                        placeholder="Telefono"
-                                        value={empleado.telefono}
-                                        onChange={onChange}
-                                    />
-                            </p>
-                            <p>
-                                <span className="modal-lable">Email:</span>
-                                    <input 
-                                        type="text" 
-                                        name="email"
-                                        id="email" 
-                                        placeholder="Email"
-                                        value={empleado.email}
-                                        onChange={onChange}
-                                    />
-                            </p>
-                            <p>
-                                <span className="modal-lable">Posicion:</span>
-                                    <input 
-                                        type="text" 
-                                        name="posicion"
-                                        id="posicion" 
-                                        placeholder="Posicion"
-                                        value={empleado.posicion}
-                                        onChange={onChange}
-                                    />
-                            </p>
-        </ModalBody>
-        <ModalFooter>
-          <Button color="primary" onClick={toggle}>Do Something</Button>{' '}
-          <Button color="secondary" onClick={toggle}>Cancel</Button>
-        </ModalFooter>
-      </Modal>
-    </div> */}
-
         </div> 
       </>
 

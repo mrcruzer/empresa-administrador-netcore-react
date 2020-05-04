@@ -2,28 +2,48 @@ import React, {useState, useEffect } from "react";
 
 import axios from "axios";
 
+import Swal from "sweetalert2";
+
 import { withRouter } from "react-router-dom";
 
-import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
-
-
+import { 
+    Button, 
+    FormGroup,
+    Input,
+    Row, 
+    Col, 
+    Modal,
+    ModalHeader,
+    ModalBody,
+    ModalFooter
+} from 'reactstrap';
 
 
 function EmpleadoAdd(props) {
 
     const [empleado, agregarEmpleado] = useState({nombre: '', apellido: '', direccion: '', edad: '', nomina: '',  tipoNomina: '', telefono: '', email: '', posicion: ''});
 
+    const [modal, setModal] = useState(false);
+
+    const toggle = () => setModal(!modal);
+
     const apiUrl = "https://localhost:44376/api/Empleado";
 
     const insertarEmpleado = (e) => {
-        e.preventDefault();
 
         const data = {nombre: empleado.nombre, apellido: empleado.apellido, direccion: empleado.direccion, edad: parseInt(empleado.edad), nomina: parseInt(empleado.nomina), tipoNomina: empleado.tipoNomina, telefono: parseInt(empleado.telefono), email: empleado.email, posicion: empleado.posicion };
 
         axios.post(apiUrl, data)
               .then((result) => {  
                 console.log(result.data)
-                props.history.push('/empleados')  
+
+                setModal(false); 
+
+                Swal.fire(
+                    'Listo',
+                    'Empleado Creado!',
+                    'success'
+                  );
               })
               .catch((error) => 
                 console.log( error.result ) ); 
@@ -33,11 +53,14 @@ function EmpleadoAdd(props) {
         e.persist();
         agregarEmpleado({...empleado, [e.target.name]: e.target.value });
     }
+
     return (
         
         <div className="content">
-            <h1>Crear Un Usuario</h1>
-            <Form onSubmit={insertarEmpleado}>
+            <Button className="btn-primary" onClick={toggle}>Agregar Empleado</Button>
+            <Modal className="special_modal" isOpen={modal} toggle={toggle}>
+                <ModalHeader className="special_header" toggle={toggle}><h3>Agregar Empleado</h3></ModalHeader>
+                <ModalBody>
                 <Row>
                     <Col className="md-6">
                         <FormGroup>
@@ -132,7 +155,7 @@ function EmpleadoAdd(props) {
                     <Col className="md-6">
                         <FormGroup>
                             <Input 
-                                type="text" 
+                                type="email" 
                                 name="email"
                                 id="email" 
                                 placeholder="Email"
@@ -161,11 +184,18 @@ function EmpleadoAdd(props) {
                         </FormGroup> 
                     </Col>
                 </Row>
-                <Button type="submit">Enviar</Button>
-            </Form>
+                </ModalBody>
+                <ModalFooter>
+                    <Button color="primary" onClick={() => insertarEmpleado()}>Agregar Empleado</Button>{' '}
+                    <Button color="secondary" onClick={toggle}>Cancelar</Button>
+                </ModalFooter>
+        </Modal>
                
-            
         </div>
+
+    
+
+
                     
         
     );
