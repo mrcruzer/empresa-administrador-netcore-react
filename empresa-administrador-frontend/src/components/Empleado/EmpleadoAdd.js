@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from "react";
+import React, {useState } from "react";
 
 import axios from "axios";
 
@@ -29,16 +29,16 @@ function EmpleadoAdd(props) {
 
     const apiUrl = "https://localhost:44376/api/Empleado";
 
-    const insertarEmpleado = (e) => {
+    const insertarEmpleado = () => {
+    
+        //e.preventDefault();
 
-        const data = {nombre: empleado.nombre, apellido: empleado.apellido, direccion: empleado.direccion, edad: parseInt(empleado.edad), nomina: parseInt(empleado.nomina), tipoNomina: empleado.tipoNomina, telefono: parseInt(empleado.telefono), email: empleado.email, posicion: empleado.posicion };
+    const data = {nombre: empleado.nombre, apellido: empleado.apellido, direccion: empleado.direccion, edad: parseInt(empleado.edad), nomina: parseInt(empleado.nomina), tipoNomina: empleado.tipoNomina, telefono: parseInt(empleado.telefono), email: empleado.email, posicion: empleado.posicion };
 
         axios.post(apiUrl, data)
-              .then((result) => {  
+             .then((result) => {  
                 console.log(result.data)
-
                 setModal(false); 
-
                 Swal.fire(
                     'Listo',
                     'Empleado Creado!',
@@ -46,11 +46,14 @@ function EmpleadoAdd(props) {
                   );
               })
               .catch((error) => 
-                console.log( error.result ) ); 
+                console.log( error.response ) ); 
+        
     } 
 
     const onChange = (e) => {
+
         e.persist();
+
         agregarEmpleado({...empleado, [e.target.name]: e.target.value });
     }
 
@@ -155,7 +158,7 @@ function EmpleadoAdd(props) {
                     <Col className="md-6">
                         <FormGroup>
                             <Input 
-                                type="email" 
+                                type="text" 
                                 name="email"
                                 id="email" 
                                 placeholder="Email"

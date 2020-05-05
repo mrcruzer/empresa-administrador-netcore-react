@@ -16,10 +16,9 @@ import {
     ModalHeader, 
     ModalBody, 
     ModalFooter
-    //Toast, ToastBody, ToastHeader
   } from "reactstrap";
 
-function ModalEdit(props) {
+function EmpleadoEdit(props) {
 
     const [empleado, agregarEmpleado] = useState({id: '', nombre: '', apellido: '', direccion: '', edad: '', nomina: '',  tipoNomina: '', telefono: '', email: '', posicion: ''});
 
@@ -35,8 +34,8 @@ function ModalEdit(props) {
         agregarEmpleado(resultado.data);
         };
         obtenerDatos();
-        console.log(apiUrl);
-    },[apiUrl]);
+        //console.log(apiUrl);
+    },[]);
 
     const EditarEmpleado = (e) => {
 
@@ -70,7 +69,7 @@ function ModalEdit(props) {
         e.persist();
 
         agregarEmpleado({...empleado, [e.target.name] : e.target.value });
-        console.log(empleado);
+        //console.log(empleado);
     }
     
 
@@ -215,7 +214,7 @@ function ModalEdit(props) {
     
 }
 
-export default withRouter(ModalEdit);
+export default withRouter(EmpleadoEdit);
 
 
     

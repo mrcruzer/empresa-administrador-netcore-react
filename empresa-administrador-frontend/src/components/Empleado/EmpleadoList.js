@@ -2,15 +2,13 @@ import React, {useState, useEffect } from "react";
 
 import axios from "axios";
 
-//import EmpleadoAdd from './EmpleadoAdd';
-
-import Popup from "reactjs-popup";
+import Swal from "sweetalert2";
 
 import { withRouter }  from "react-router-dom";
 
 import EmpleadoAdd from "./EmpleadoAdd";
 
-import ModalEdit from './ModalEdit';
+import EmpleadoEdit from './EmpleadoEdit';
 
 
 // reactstrap components
@@ -32,6 +30,8 @@ function EmpleadoList(props)  {
 
     const apiUrl = "https://localhost:44376/api/Empleado";
 
+   
+
     useEffect(() => {
         const obtenerDatos = async () => {
             const resultado = await axios(apiUrl);
@@ -45,20 +45,42 @@ function EmpleadoList(props)  {
     },[datos]);
 
 
-    
-
-   
-
-  
-    const editarEmpleado = (id) => {
-      asignarCambio(id);
-      //console.log("Editando Empleado" + cambio);
-    
-      
-    }
 
     const eliminarEmpleado = (id) => {
-      console.log("Eliminando Empleado " + id) ;
+
+      const data = {nombre: datos.nombre, apellido: datos.apellido, direccion: datos.direccion, edad: parseInt(datos.edad), nomina: parseInt(datos.nomina), tipoNomina: datos.tipoNomina, telefono: parseInt(datos.telefono), email: datos.email, posicion: datos.posicion };
+
+      const apiUrl = "https://localhost:44376/api/Empleado/" + id;
+
+
+      //console.log(apiUrl);
+
+      Swal.fire({
+        title: 'Estas Seguro?',
+        text: "Esta accion es irreversible!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, Eliminar!'
+      }).then((result) => {
+          if(result.value) {
+            axios.delete(apiUrl, data)
+            //loadData(); 
+              Swal.fire(
+                'Borrado!',
+                'El Empleado ha sido eliminado.',
+                'success'
+              );
+          
+          }
+        
+      })
+      //console.log(datos.id);
+
+     
+
+    
     }
 
     
@@ -105,7 +127,7 @@ function EmpleadoList(props)  {
                         <td>
                         <div className="btn-group">
                                 
-                                <ModalEdit item={item.id}/>
+                                <EmpleadoEdit item={item.id}/>
                                 <Button type="button" className="btn-danger mr-1" onClick={() => eliminarEmpleado(item.id)}>Eliminar</Button>
                 
                             </div>
