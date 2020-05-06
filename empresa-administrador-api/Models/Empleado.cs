@@ -24,13 +24,13 @@ namespace empresa_administrador_api.Models
         public int Edad { get; set; }
 
 
-        public int Nomina { get; set; }
+        public long Nomina { get; set; }
 
         [Column(TypeName = "VARCHAR(50)")]
         public string TipoNomina { get; set; }
 
 
-        public int Telefono { get; set; }
+        public long Telefono { get; set; }
 
         [Column(TypeName = "VARCHAR(100)")]
         public string Email { get; set; }

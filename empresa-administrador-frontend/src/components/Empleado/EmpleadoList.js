@@ -26,7 +26,7 @@ import {
 function EmpleadoList(props)  {
 
     const [datos, asignarDatos] = useState([]);
-    const [cambio, asignarCambio] = useState('');
+    //const [cambio, asignarCambio] = useState('');
 
     const apiUrl = "https://localhost:44376/api/Empleado";
 
@@ -77,10 +77,6 @@ function EmpleadoList(props)  {
         
       })
       //console.log(datos.id);
-
-     
-
-    
     }
 
     

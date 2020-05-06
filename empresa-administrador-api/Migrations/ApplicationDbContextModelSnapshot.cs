@@ -40,14 +40,14 @@ namespace empresa_administrador_api.Migrations
                     b.Property<string>("Nombre")
                         .HasColumnType("VARCHAR(100)");
 
-                    b.Property<int>("Nomina")
-                        .HasColumnType("int");
+                    b.Property<long>("Nomina")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Posicion")
                         .HasColumnType("VARCHAR(100)");
 
-                    b.Property<int>("Telefono")
-                        .HasColumnType("int");
+                    b.Property<long>("Telefono")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("TipoNomina")
                         .HasColumnType("VARCHAR(50)");

@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 
 import axios from "axios";
 
@@ -15,7 +15,11 @@ import {
     Modal,
     ModalHeader,
     ModalBody,
-    ModalFooter
+    ModalFooter,
+    Dropdown, 
+    DropdownToggle, 
+    DropdownMenu, 
+    DropdownItem
 } from 'reactstrap';
 
 
@@ -23,11 +27,29 @@ function EmpleadoAdd(props) {
 
     const [empleado, agregarEmpleado] = useState({nombre: '', apellido: '', direccion: '', edad: '', nomina: '',  tipoNomina: '', telefono: '', email: '', posicion: ''});
 
+
+        // Abrir Y Cerrar Modal
     const [modal, setModal] = useState(false);
 
-    const toggle = () => setModal(!modal);
+    const toggleModal = () => setModal(!modal);
+
+        // Abrir y Cerrar Dropdown
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => setDropdownOpen(prevState => !prevState);
+
 
     const apiUrl = "https://localhost:44376/api/Empleado";
+
+    // useEffect(() => {
+    //     const obtenerDatos = async () => {
+    //     const resultado = await axios(apiUrl);
+    //     agregarEmpleado(resultado.data);
+    //     };
+    //     obtenerDatos();
+    //     //console.log(apiUrl);
+    // },[apiUrl]);
+
 
     const insertarEmpleado = () => {
     
@@ -38,7 +60,9 @@ function EmpleadoAdd(props) {
         axios.post(apiUrl, data)
              .then((result) => {  
                 console.log(result.data)
+
                 setModal(false); 
+
                 Swal.fire(
                     'Listo',
                     'Empleado Creado!',
@@ -60,9 +84,9 @@ function EmpleadoAdd(props) {
     return (
         
         <div className="content">
-            <Button className="btn-primary" onClick={toggle}>Agregar Empleado</Button>
-            <Modal className="special_modal" isOpen={modal} toggle={toggle}>
-                <ModalHeader className="special_header" toggle={toggle}><h3>Agregar Empleado</h3></ModalHeader>
+            <Button className="btn-primary" onClick={toggleModal}>Agregar Empleado</Button>
+            <Modal className="special_modal" isOpen={modal} toggleModal={toggleModal}>
+                <ModalHeader className="special_header" toggleModal={toggleModal}><h3>Agregar Empleado</h3></ModalHeader>
                 <ModalBody>
                 <Row>
                     <Col className="md-6">
@@ -106,7 +130,7 @@ function EmpleadoAdd(props) {
                     <Col className="md-6">
                         <FormGroup>
                             <Input 
-                                type="text" 
+                                type="number" 
                                 name="edad"
                                 id="edad" 
                                 placeholder="Edad"
@@ -120,7 +144,7 @@ function EmpleadoAdd(props) {
                     <Col className="md-6">
                         <FormGroup>
                             <Input 
-                                type="text" 
+                                type="number" 
                                 name="nomina"
                                 id="nomina" 
                                 placeholder="Nomina"
@@ -131,14 +155,23 @@ function EmpleadoAdd(props) {
                     </Col>
                     <Col className="md-6">
                         <FormGroup>
-                            <Input 
+                        <Dropdown isOpen={dropdownOpen} toggleDropdown={toggleDropdown}>
+                            <DropdownToggle>
+                                Tipo De Nomina
+                                </DropdownToggle>
+                            <DropdownMenu>
+                                <DropdownItem>Mensual</DropdownItem>
+                                <DropdownItem>Quincenal</DropdownItem>
+                            </DropdownMenu>
+                            </Dropdown>
+                            {/* <Input 
                                 type="text" 
                                 name="tipoNomina"
                                 id="tipoNomina" 
                                 placeholder="Tipo De Nomina"
                                 value={empleado.tipoNomina}
                                 onChange={onChange}
-                            />
+                            /> */}
                         </FormGroup> 
                     </Col>
                 </Row>
@@ -146,7 +179,7 @@ function EmpleadoAdd(props) {
                     <Col className="md-6">
                         <FormGroup>
                             <Input 
-                                type="text" 
+                                type="number" 
                                 name="telefono"
                                 id="telefono" 
                                 placeholder="Telefono"
@@ -190,7 +223,7 @@ function EmpleadoAdd(props) {
                 </ModalBody>
                 <ModalFooter>
                     <Button color="primary" onClick={() => insertarEmpleado()}>Agregar Empleado</Button>{' '}
-                    <Button color="secondary" onClick={toggle}>Cancelar</Button>
+                    <Button color="secondary" onClick={toggleModal}>Cancelar</Button>
                 </ModalFooter>
         </Modal>
                

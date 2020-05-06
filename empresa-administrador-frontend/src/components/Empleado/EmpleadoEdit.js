@@ -35,7 +35,7 @@ function EmpleadoEdit(props) {
         };
         obtenerDatos();
         //console.log(apiUrl);
-    },[]);
+    },[apiUrl]);
 
     const EditarEmpleado = (e) => {
 
