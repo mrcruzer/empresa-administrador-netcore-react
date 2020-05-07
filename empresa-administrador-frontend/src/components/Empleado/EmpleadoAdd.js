@@ -19,7 +19,8 @@ import {
     Dropdown, 
     DropdownToggle, 
     DropdownMenu, 
-    DropdownItem
+    DropdownItem,
+    UncontrolledDropdown
 } from 'reactstrap';
 
 
@@ -31,13 +32,20 @@ function EmpleadoAdd(props) {
         // Abrir Y Cerrar Modal
     const [modal, setModal] = useState(false);
 
-    const toggleModal = () => setModal(!modal);
+    //const toggle = () => setModal(!modal);
 
         // Abrir y Cerrar Dropdown
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
-    const toggleDropdown = () => setDropdownOpen(prevState => !prevState);
+    //const toggleDropdown = () => setDropdownOpen(prevState => !prevState);
 
+    //const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
+
+    //const toggle = () => setModal(!modal);
+
+    const toggle = () => function(valor) {
+        console.log(valor);
+     }
 
     const apiUrl = "https://localhost:44376/api/Empleado";
 
@@ -84,9 +92,9 @@ function EmpleadoAdd(props) {
     return (
         
         <div className="content">
-            <Button className="btn-primary" onClick={toggleModal}>Agregar Empleado</Button>
-            <Modal className="special_modal" isOpen={modal} toggleModal={toggleModal}>
-                <ModalHeader className="special_header" toggleModal={toggleModal}><h3>Agregar Empleado</h3></ModalHeader>
+            <Button className="btn-primary" onClick={toggle("Modal")}>Agregar Empleado</Button>
+            <Modal className="special_modal" isOpen={modal} toggle={toggle}>
+                <ModalHeader className="special_header" toggle={toggle}><h3>Agregar Empleado</h3></ModalHeader>
                 <ModalBody>
                 <Row>
                     <Col className="md-6">
@@ -155,15 +163,19 @@ function EmpleadoAdd(props) {
                     </Col>
                     <Col className="md-6">
                         <FormGroup>
-                        <Dropdown isOpen={dropdownOpen} toggleDropdown={toggleDropdown}>
-                            <DropdownToggle>
-                                Tipo De Nomina
-                                </DropdownToggle>
+                        
+                        <Dropdown isOpen={dropdownOpen} toggle={toggle(2)}>
+                            
+                                <DropdownToggle>
+                                    Tipo De Nomina
+                                    </DropdownToggle>
+                               
                             <DropdownMenu>
                                 <DropdownItem>Mensual</DropdownItem>
                                 <DropdownItem>Quincenal</DropdownItem>
                             </DropdownMenu>
                             </Dropdown>
+                            
                             {/* <Input 
                                 type="text" 
                                 name="tipoNomina"
@@ -223,7 +235,7 @@ function EmpleadoAdd(props) {
                 </ModalBody>
                 <ModalFooter>
                     <Button color="primary" onClick={() => insertarEmpleado()}>Agregar Empleado</Button>{' '}
-                    <Button color="secondary" onClick={toggleModal}>Cancelar</Button>
+                    <Button color="secondary" onClick={toggle}>Cancelar</Button>
                 </ModalFooter>
         </Modal>
                
