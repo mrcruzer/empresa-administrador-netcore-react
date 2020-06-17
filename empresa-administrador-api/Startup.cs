@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using empresa_administrador_api.Models;
@@ -37,6 +38,24 @@ namespace empresa_administrador_api
                     .AllowAnyMethod()
                     .AllowAnyHeader());
             });
+        }
+
+        public class LambdaFunction : Amazon.Lambda.AspNetCoreServer.APIGatewayProxyFunction
+        {
+            protected override void Init(IWebHostBuilder builder)
+            {
+                builder
+                    .UseContentRoot(Directory.GetCurrentDirectory())
+                    .UseStartup<Startup>();
+                .UseApi
+      
+            }
+
+            protected override void Init(IHostBuilder builder)
+            {
+                builder
+                     .UseApiGateway();
+            }
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

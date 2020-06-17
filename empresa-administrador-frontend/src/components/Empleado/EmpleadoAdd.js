@@ -19,8 +19,7 @@ import {
     Dropdown, 
     DropdownToggle, 
     DropdownMenu, 
-    DropdownItem,
-    UncontrolledDropdown
+    DropdownItem
 } from 'reactstrap';
 
 
@@ -41,22 +40,14 @@ function EmpleadoAdd(props) {
 
     //const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
-    //const toggle = () => setModal(!modal);
+    const toggle = () => setModal(!modal);
 
-    const toggle = () => function(valor) {
-        console.log(valor);
-     }
+
+    // const toggle = (name) => () {
+        // m,console.log(valor);
+    //  }
 
     const apiUrl = "https://localhost:44376/api/Empleado";
-
-    // useEffect(() => {
-    //     const obtenerDatos = async () => {
-    //     const resultado = await axios(apiUrl);
-    //     agregarEmpleado(resultado.data);
-    //     };
-    //     obtenerDatos();
-    //     //console.log(apiUrl);
-    // },[apiUrl]);
 
 
     const insertarEmpleado = () => {
@@ -92,7 +83,7 @@ function EmpleadoAdd(props) {
     return (
         
         <div className="content">
-            <Button className="btn-primary" onClick={toggle("Modal")}>Agregar Empleado</Button>
+            <Button className="btn-primary" onClick={toggle}>Agregar Empleado</Button>
             <Modal className="special_modal" isOpen={modal} toggle={toggle}>
                 <ModalHeader className="special_header" toggle={toggle}><h3>Agregar Empleado</h3></ModalHeader>
                 <ModalBody>
@@ -250,3 +241,8 @@ function EmpleadoAdd(props) {
 }
 
 export default withRouter(EmpleadoAdd);
+
+
+
+
+

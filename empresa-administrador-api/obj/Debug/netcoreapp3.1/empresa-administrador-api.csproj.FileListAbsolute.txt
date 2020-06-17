@@ -124,4 +124,3 @@ C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\emp
 C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
-C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\obj\Debug\netcoreapp3.1\empresa-administrador-api.MvcApplicationPartsAssemblyInfo.cache

@@ -42,7 +42,7 @@ function EmpleadoList(props)  {
         obtenerDatos();
 
         //ModalEdit.toggle();
-    },[datos]);
+    },[]);
 
 
 

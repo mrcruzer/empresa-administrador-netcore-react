@@ -14,6 +14,7 @@ namespace empresa_administrador_api
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
+            //CreateWebHostBuilder(args).Build().Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
