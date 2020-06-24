@@ -46,16 +46,12 @@ namespace empresa_administrador_api
             {
                 builder
                     .UseContentRoot(Directory.GetCurrentDirectory())
-                    .UseStartup<Startup>();
-                .UseApi
+                    .UseStartup<Startup>()
+                    .UseLamdaServer();
       
             }
 
-            protected override void Init(IHostBuilder builder)
-            {
-                builder
-                     .UseApiGateway();
-            }
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
