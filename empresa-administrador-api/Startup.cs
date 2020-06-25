@@ -46,8 +46,8 @@ namespace empresa_administrador_api
             {
                 builder
                     .UseContentRoot(Directory.GetCurrentDirectory())
-                    .UseStartup<Startup>()
-                    .UseLamdaServer();
+                    .UseStartup<Startup>();
+                    
       
             }
 

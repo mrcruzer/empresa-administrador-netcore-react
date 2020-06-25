@@ -20,14 +20,14 @@ namespace empresa_administrador_api.Controllers
             _context = context;
         }
 
-        // GET: api/Empleado
+       // Obtener Empleados
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Empleado>>> GetEmpleados()
         {
             return await _context.Empleados.ToListAsync();
         }
 
-        // GET: api/Empleado/5
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Empleado>> GetEmpleado(int id)
         {
@@ -42,8 +42,6 @@ namespace empresa_administrador_api.Controllers
         }
 
         // PUT: api/Empleado/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutEmpleado(int id, Empleado empleado)
         {
@@ -73,9 +71,7 @@ namespace empresa_administrador_api.Controllers
             return NoContent();
         }
 
-        // POST: api/Empleado
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+       
         [HttpPost]
         public async Task<ActionResult<Empleado>> PostEmpleado(Empleado empleado)
         {
@@ -85,7 +81,7 @@ namespace empresa_administrador_api.Controllers
             return CreatedAtAction("GetEmpleado", new { id = empleado.Id }, empleado);
         }
 
-        // DELETE: api/Empleado/5
+        
         [HttpDelete("{id}")]
         public async Task<ActionResult<Empleado>> DeleteEmpleado(int id)
         {
