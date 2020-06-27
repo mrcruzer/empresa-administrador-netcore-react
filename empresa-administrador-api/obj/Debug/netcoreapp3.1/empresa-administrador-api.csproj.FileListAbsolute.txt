@@ -131,3 +131,8 @@ C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\emp
 C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\bin\Debug\netcoreapp3.1\Amazon.Lambda.Logging.AspNetCore.dll
 C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\bin\Debug\netcoreapp3.1\Amazon.Lambda.Serialization.SystemTextJson.dll
 C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\bin\Debug\netcoreapp3.1\Amazon.Lambda.RuntimeSupport.dll
+C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\bin\Debug\netcoreapp3.1\Amazon.Lambda.Serialization.Json.dll
+C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\bin\Debug\netcoreapp3.1\AWSSDK.Core.dll
+C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\bin\Debug\netcoreapp3.1\AWSSDK.Extensions.NETCore.Setup.dll
