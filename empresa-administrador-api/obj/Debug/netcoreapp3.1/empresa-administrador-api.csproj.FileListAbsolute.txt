@@ -136,3 +136,5 @@ C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\emp
 C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\bin\Debug\netcoreapp3.1\AWSSDK.Core.dll
 C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\bin\Debug\netcoreapp3.1\AWSSDK.Extensions.NETCore.Setup.dll
+C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\obj\Debug\netcoreapp3.1\empresa-administrador-api.csproj.CoreCompileInputs.cache
+C:\Users\Verynice\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\obj\Debug\netcoreapp3.1\empresa-administrador-api.MvcApplicationPartsAssemblyInfo.cache
