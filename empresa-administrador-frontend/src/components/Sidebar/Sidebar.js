@@ -119,6 +119,18 @@ class Sidebar extends React.Component {
                 onClick={this.props.toggleSidebar}
                 >
                   <i className="tim-icons icon-pin"/>
+                  <h5 className="simple-text">Administrador</h5>
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink 
+                to={"/admin/empleados"}
+                className="nav-link"
+                activeClassName="active"
+                onClick={this.props.toggleSidebar}
+                >
+                  <i className="tim-icons icon-pin"/>
                   <h5 className="simple-text">Empleados</h5>
               </NavLink>
             </li>
