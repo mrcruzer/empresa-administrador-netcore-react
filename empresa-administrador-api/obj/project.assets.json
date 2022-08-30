@@ -9873,23 +9873,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Verynice\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Numbers Tech\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Verynice\\Desktop\\Net-Core-React\\empresa-administrador-netcore-react\\empresa-administrador-api\\empresa-administrador-api.csproj",
+      "projectUniqueName": "C:\\Users\\Numbers Tech\\Desktop\\empresa-administrador-netcore-react\\empresa-administrador-api\\empresa-administrador-api.csproj",
       "projectName": "empresa-administrador-api",
-      "projectPath": "C:\\Users\\Verynice\\Desktop\\Net-Core-React\\empresa-administrador-netcore-react\\empresa-administrador-api\\empresa-administrador-api.csproj",
-      "packagesPath": "C:\\Users\\Verynice\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Verynice\\Desktop\\Net-Core-React\\empresa-administrador-netcore-react\\empresa-administrador-api\\obj\\",
+      "projectPath": "C:\\Users\\Numbers Tech\\Desktop\\empresa-administrador-netcore-react\\empresa-administrador-api\\empresa-administrador-api.csproj",
+      "packagesPath": "C:\\Users\\Numbers Tech\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Numbers Tech\\Desktop\\empresa-administrador-netcore-react\\empresa-administrador-api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Verynice\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Numbers Tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9901,6 +9902,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -9912,6 +9914,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "AWSSDK.Extensions.NETCore.Setup": {
             "target": "Package",
@@ -9988,7 +9991,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

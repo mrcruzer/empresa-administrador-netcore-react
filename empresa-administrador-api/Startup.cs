@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 
 namespace empresa_administrador_api
 {
@@ -29,8 +30,15 @@ namespace empresa_administrador_api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers().AddNewtonsoftJson();
-            //object p = services.AddRouteAnalyzer();
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Administrador de Empresas", Version = "v1" });
+            });
+
+            services.AddControllers();
+
+            services.AddDbContext<EmpresaDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",
@@ -40,19 +48,19 @@ namespace empresa_administrador_api
             });
         }
 
-        public class LambdaFunction : Amazon.Lambda.AspNetCoreServer.APIGatewayProxyFunction
-        {
-            protected override void Init(IWebHostBuilder builder)
-            {
-                builder
-                    .UseContentRoot(Directory.GetCurrentDirectory())
-                    .UseStartup<Startup>();
-                    
-      
-            }
+        /* public class LambdaFunction : Amazon.Lambda.AspNetCoreServer.APIGatewayProxyFunction
+         {
+             protected override void Init(IWebHostBuilder builder)
+             {
+                 builder
+                     .UseContentRoot(Directory.GetCurrentDirectory())
+                     .UseStartup<Startup>();
 
-           
-        }
+
+             }
+
+
+         }*/
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -67,6 +75,15 @@ namespace empresa_administrador_api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            // Enable Middleware
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Administrador de Empresas");
+            });
+
 
             app.UseAuthorization();
 
