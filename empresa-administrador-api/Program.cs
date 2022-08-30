@@ -2,12 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-
-using Amazon.Lambda.Core;
-using Amazon.Lambda.APIGatewayEvents;
-using Amazon.Lambda.RuntimeSupport;
 using static empresa_administrador_api.Startup;
-using Amazon.Lambda.Serialization.Json;
 //using Newtonsoft.Json;
 
 namespace empresa_administrador_api
@@ -16,11 +11,11 @@ namespace empresa_administrador_api
     {
         public static void Main(string[] args)
         {
-            if(string.IsNullOrEmpty(Environment.GetEnvironmentVariable("AWS_LAMBDA_FUNCTION_NAME")))
-            {
-                CreateHostBuilder(args).Build().Run();
-                //CreateWebHostBuilder(args).Build().Run();
-            }
+            /*if(string.IsNullOrEmpty(Environment.GetEnvironmentVariable("AWS_LAMBDA_FUNCTION_NAME")))
+            {*/
+            CreateHostBuilder(args).Build().Run();
+            //CreateWebHostBuilder(args).Build().Run();
+            /*}
             else
             {
                 var lambdaEntry = new LambdaFunction();
@@ -30,7 +25,7 @@ namespace empresa_administrador_api
                 {
                     bootstrap.RunAsync().Wait();
                 }
-            }
+            }*/
 
 
         }

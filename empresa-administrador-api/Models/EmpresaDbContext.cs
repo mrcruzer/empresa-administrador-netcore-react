@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace empresa_administrador_api.Models
 {
-    public class ApplicationDbContext: DbContext
+    public class EmpresaDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public EmpresaDbContext(DbContextOptions<EmpresaDbContext> options)
             : base(options)
         { }
 
