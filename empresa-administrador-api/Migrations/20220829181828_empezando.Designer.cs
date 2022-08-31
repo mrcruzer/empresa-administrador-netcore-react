@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using empresa_administrador_api.Models;
+using empresa_administrador_api.Data;
 
 namespace empresa_administrador_api.Migrations
 {
