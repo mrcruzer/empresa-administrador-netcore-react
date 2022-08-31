@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using empresa_administrador_api.Models;
+using empresa_administrador_api.Models.Common;
+using empresa_administrador_api.Data;
 
 namespace empresa_administrador_api.Controllers
 {
