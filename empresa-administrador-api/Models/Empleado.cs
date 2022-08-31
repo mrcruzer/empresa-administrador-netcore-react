@@ -13,10 +13,10 @@ namespace empresa_administrador_api.Models
         public int Id { get; set; }
 
         [Column(TypeName = "VARCHAR(100)")]
-        public string Nombre { get; set; }
+        public string Name { get; set; }
 
         [Column(TypeName = "VARCHAR(100)")]
-        public string Apellido { get; set; }
+        public string LastName { get; set; }
 
         [Column(TypeName = "VARCHAR(100)")]
         public string Direccion { get; set; }
