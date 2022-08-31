@@ -68,6 +68,7 @@ namespace empresa_administrador_api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                //app.UseMigrationsEndPoint();
             }
 
             app.UseCors("CorsPolicy");

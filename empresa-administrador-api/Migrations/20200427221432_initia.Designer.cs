@@ -8,7 +8,7 @@ using empresa_administrador_api.Models;
 
 namespace empresa_administrador_api.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(EmpresaDbContext))]
     [Migration("20200427221432_initia")]
     partial class initia
     {

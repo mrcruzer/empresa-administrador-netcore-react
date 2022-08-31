@@ -13,9 +13,9 @@ namespace empresa_administrador_api.Controllers
     [ApiController]
     public class EmpleadoController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly EmpresaDbContext _context;
 
-        public EmpleadoController(ApplicationDbContext context)
+        public EmpleadoController(EmpresaDbContext context)
         {
             _context = context;
         }

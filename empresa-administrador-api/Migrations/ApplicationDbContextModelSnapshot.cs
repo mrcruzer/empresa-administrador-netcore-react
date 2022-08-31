@@ -7,7 +7,7 @@ using empresa_administrador_api.Models;
 
 namespace empresa_administrador_api.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(EmpresaDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
