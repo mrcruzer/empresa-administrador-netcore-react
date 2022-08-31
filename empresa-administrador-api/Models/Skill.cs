@@ -18,6 +18,8 @@ namespace empresa_administrador_api.Models
         [Column(TypeName = "VARCHAR(100)")]
         public string Description { get; set; }
 
-        
+        public ICollection<Employee> Employees { get; set; }
+
+
     }
 }

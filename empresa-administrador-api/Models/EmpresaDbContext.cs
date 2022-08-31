@@ -12,6 +12,6 @@ namespace empresa_administrador_api.Models
             : base(options)
         { }
 
-        public DbSet<Empleado> Empleados { get; set; }
+        public DbSet<Employee> Empleados { get; set; }
     }
 }

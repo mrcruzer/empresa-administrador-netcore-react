@@ -22,14 +22,14 @@ namespace empresa_administrador_api.Controllers
 
        // Obtener Empleados
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Empleado>>> GetEmpleados()
+        public async Task<ActionResult<IEnumerable<Employee>>> GetEmpleados()
         {
             return await _context.Empleados.ToListAsync();
         }
 
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Empleado>> GetEmpleado(int id)
+        public async Task<ActionResult<Employee>> GetEmpleado(int id)
         {
             var empleado = await _context.Empleados.FindAsync(id);
 
@@ -43,7 +43,7 @@ namespace empresa_administrador_api.Controllers
 
         // PUT: api/Empleado/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutEmpleado(int id, Empleado empleado)
+        public async Task<IActionResult> PutEmpleado(int id, Employee empleado)
         {
             if (id != empleado.Id)
             {
@@ -73,7 +73,7 @@ namespace empresa_administrador_api.Controllers
 
        
         [HttpPost]
-        public async Task<ActionResult<Empleado>> PostEmpleado(Empleado empleado)
+        public async Task<ActionResult<Employee>> PostEmpleado(Employee empleado)
         {
             _context.Empleados.Add(empleado);
             await _context.SaveChangesAsync();
@@ -83,7 +83,7 @@ namespace empresa_administrador_api.Controllers
 
         
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Empleado>> DeleteEmpleado(int id)
+        public async Task<ActionResult<Employee>> DeleteEmpleado(int id)
         {
             var empleado = await _context.Empleados.FindAsync(id);
             if (empleado == null)

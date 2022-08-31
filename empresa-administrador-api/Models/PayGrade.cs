@@ -17,6 +17,8 @@ namespace empresa_administrador_api.Models
 
         public int Currency { get; set; }
 
-        
+        public ICollection<Employee> Employees { get; set; }
+
+
     }
 }
