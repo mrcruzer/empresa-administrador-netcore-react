@@ -9,7 +9,13 @@ import { PropTypes } from "prop-types";
 import PerfectScrollbar from "perfect-scrollbar";
 
 // reactstrap components
-import { Nav, NavItem, NavLink as ReactstrapNavLink } from "reactstrap";
+import { Nav, 
+  NavItem, 
+  NavLink as ReactstrapNavLink, 
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  UncontrolledDropdown, } from "reactstrap";
 
 var ps;
 
@@ -122,7 +128,6 @@ class Sidebar extends React.Component {
                   <h5 className="simple-text">Administrador</h5>
               </NavLink>
             </li>
-
             <li>
               <NavLink 
                 to={"/admin/empleados"}

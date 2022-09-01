@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using empresa_administrador_api.Data;
 using empresa_administrador_api.Models;
 using Swashbuckle.AspNetCore.Annotations;
+using empresa_administrador_api.Dtos.API.Nationality;
 
 namespace empresa_administrador_api.Controllers
 {
@@ -24,27 +25,31 @@ namespace empresa_administrador_api.Controllers
         }
 
         
-        [HttpGet]
+        [HttpGet("List")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(NationalityResponse))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [Produces("application/json")]
-        [SwaggerOperation(Summary="Listado de nacionalidades", Description = "Listar todas las nacionalidades")]
+        [SwaggerOperation(Summary="Listado de nacionalidades", Description = "Listado de nacionalidades")]
         public async Task<ActionResult<IEnumerable<Nationality>>> GetNationalities()
         {
-            return await _context.Nationalities.ToListAsync();
+            return await _context.Nationalities.Include(employee => employee.Employees).ToListAsync();
         }
 
         // GET: api/Nationality/5
         [HttpGet("{id}")]
         [Produces("application/json")]
-        public async Task<ActionResult<Nationality>> GetNationality(int id)
+        public async Task<ActionResult<GetNationality>> GetNationality(int id)
         {
-            var nationality = await _context.Nationalities.FindAsync(id);
+            var nationality = await _context.Nationalities.Include(employee => employee.Employees).FirstOrDefaultAsync(x => x.Id == id);
+            var nationalityDTO = new GetNationality() { Name = nationality.Name };
 
             if (nationality == null)
             {
                 return NotFound();
             }
 
-            return nationality;
+            return nationalityDTO;
         }
 
         // PUT: api/Nationality/5
@@ -83,12 +88,15 @@ namespace empresa_administrador_api.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         [Produces("application/json")]
-        public async Task<ActionResult<Nationality>> PostNationality(Nationality nationality)
+        [SwaggerResponse(200)]
+        public async Task<ActionResult<Nationality>> PostNationality(CreateNationality createNationalityDTO)
         {
+
+            var nationality = new Nationality() { Name = createNationalityDTO.Name }; 
             _context.Nationalities.Add(nationality);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetNationality", new { id = nationality.Id }, nationality);
+            return CreatedAtAction("GetNationality", new { id = nationality.Id }, createNationalityDTO);
         }
 
         // DELETE: api/Nationality/5

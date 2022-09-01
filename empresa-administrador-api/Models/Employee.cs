@@ -38,13 +38,17 @@ namespace empresa_administrador_api.Models
         [Column(TypeName = "VARCHAR(100)")]
         public string Email { get; set; }
 
+        public int NationalityId { get; set; }
+        public int JobTitleId { get; set; }
+
+        public int JobCategoryId { get; set; }
 
         // Relations
         public Nationality Nationality { get; set; }
 
-        /*public JobTitle JobTitle { get; set; }
+        public JobTitle JobTitle { get; set; }
 
-        public JobCategory JobCategory { get; set; }*/
+        public JobCategory JobCategory { get; set; }
 
     }
 }

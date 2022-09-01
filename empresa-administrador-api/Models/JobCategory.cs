@@ -11,7 +11,8 @@ namespace empresa_administrador_api.Models
     public class JobCategory : AuditableBaseEntity
     {
 
-        [Column(TypeName = "VARCHAR(100)")]
+        [Required]
+        [MaxLength(100)]
         public string Name { get; set; }
 
         public ICollection<Employee> Employees { get; set; }

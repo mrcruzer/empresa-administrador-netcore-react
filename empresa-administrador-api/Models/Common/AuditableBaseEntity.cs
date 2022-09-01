@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace empresa_administrador_api.Models.Common
 {
-    public class AuditableBaseEntity
+    public abstract class AuditableBaseEntity
     {
         public int Id { get; set; }
         public DateTime Created { get; set; }

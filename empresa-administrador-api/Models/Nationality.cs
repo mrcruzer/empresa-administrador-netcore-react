@@ -11,11 +11,10 @@ namespace empresa_administrador_api.Models
     public class Nationality : AuditableBaseEntity
     {
 
-        [Column(TypeName = "VARCHAR(100)")]
+        [Required]
+        [MaxLength(50)]
         public string Name { get; set; }
-
-        public int EmployeeId { get; set; }
-        public Employee Employees { get; set; }
+        public ICollection<Employee> Employees { get; set; }
 
     }
 }

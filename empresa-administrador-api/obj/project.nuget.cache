@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "XY1Md150Vw260GrzHUvKskRZ2UVVrP22EZMtAB4Il/oaayVLx4TvZf0alb873w6ZE/Pmih/4wYzATHeZIQVWgQ==",
+  "dgSpecHash": "Baq+UuL0Seyi/qi6oLfmFA/oq8YZHPu8QJnmyP/oVjXiRN9fJYIUPRSpQtMxgukO9Kt3LG5OuB0czTTaA0GYew==",
   "success": true,
   "projectFilePath": "C:\\Users\\Numbers Tech\\Desktop\\Net-Core-React\\empresa-administrador-netcore-react\\empresa-administrador-api\\empresa-administrador-api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Numbers Tech\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\Numbers Tech\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\Numbers Tech\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Numbers Tech\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\Numbers Tech\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

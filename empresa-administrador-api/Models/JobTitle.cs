@@ -10,11 +10,12 @@ namespace empresa_administrador_api.Models
 {
     public class JobTitle : AuditableBaseEntity
     {
-
-        [Column(TypeName = "VARCHAR(50)")]
+        [Required]
+        [MaxLength(50)]
         public string Name { get; set; }
 
-        [Column(TypeName = "VARCHAR(100)")]
+        [Required]
+        [MaxLength(100)]
         public string Description { get; set; }
 
         public ICollection<Employee> Employees { get; set; }
