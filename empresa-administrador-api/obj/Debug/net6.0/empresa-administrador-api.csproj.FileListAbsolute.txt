@@ -262,3 +262,8 @@ C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react
 C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\obj\Debug\net6.0\empresa-administrador-api.pdb
 C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\obj\Debug\net6.0\empresa-administrador-api.genruntimeconfig.cache
 C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\obj\Debug\net6.0\ref\empresa-administrador-api.dll
+C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\obj\Debug\net6.0\empresa-administrador-api.RazorAssemblyInfo.cache
+C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\obj\Debug\net6.0\empresa-administrador-api.RazorAssemblyInfo.cs
+C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\bin\Debug\net6.0\MediatR.dll
+C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\bin\Debug\net6.0\MediatR.Contracts.dll

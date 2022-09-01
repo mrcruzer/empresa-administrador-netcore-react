@@ -18,23 +18,33 @@ namespace empresa_administrador_api.Models
         public string LastName { get; set; }
 
         [Column(TypeName = "VARCHAR(100)")]
-        public string Direccion { get; set; }
+        public string Address { get; set; }
 
-        public int Edad { get; set; }
+        [Column(TypeName = "VARCHAR(100)")]
+        public string City { get; set; }
+
+        [Column(TypeName = "VARCHAR(100)")]
+        public string Province { get; set; }
+
+        [Column(TypeName = "VARCHAR(100)")]
+        public string Country { get; set; }
 
 
-        public long Nomina { get; set; }
+        [Column(TypeName = "VARCHAR(25)")]
+        public string Gender { get; set; }
 
-        [Column(TypeName = "VARCHAR(50)")]
-        public string TipoNomina { get; set; }
-
-
-        public long Telefono { get; set; }
+        public long Telephone { get; set; }
 
         [Column(TypeName = "VARCHAR(100)")]
         public string Email { get; set; }
 
-        [Column(TypeName = "VARCHAR(100)")]
-        public string Posicion { get; set; }
+
+        // Relations
+        public Nationality Nationality { get; set; }
+
+        /*public JobTitle JobTitle { get; set; }
+
+        public JobCategory JobCategory { get; set; }*/
+
     }
 }

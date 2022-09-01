@@ -33,6 +33,7 @@ namespace empresa_administrador_api
 
             services.AddSwaggerGen(c =>
             {
+                c.EnableAnnotations();
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Administrador de Empresas", Version = "v1" });
             });
 

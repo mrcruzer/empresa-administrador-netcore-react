@@ -13,7 +13,7 @@ namespace empresa_administrador_api.Data
             : base(options)
         { }
 
-        public DbSet<Employee> Empleados { get; set; }
+        public DbSet<Employee> Employees { get; set; }
 
         public DbSet<Education> Educations { get; set; }
 
@@ -21,7 +21,7 @@ namespace empresa_administrador_api.Data
 
         public DbSet<JobCategory> JobCategories { get; set; }
 
-        public DbSet<JobTitle> jobTitles { get; set; }
+        public DbSet<JobTitle> JobTitles { get; set; }
 
         public DbSet<Language> Languages { get; set; }
 

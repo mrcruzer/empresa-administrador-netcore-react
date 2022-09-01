@@ -14,3 +14,27 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api
 build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Numbers Tech/Desktop/Net-Core-React/empresa-administrador-netcore-react/empresa-administrador-api/Views/JobTitles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVGl0bGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Numbers Tech/Desktop/Net-Core-React/empresa-administrador-netcore-react/empresa-administrador-api/Views/JobTitles/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVGl0bGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Numbers Tech/Desktop/Net-Core-React/empresa-administrador-netcore-react/empresa-administrador-api/Views/JobTitles/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVGl0bGVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Numbers Tech/Desktop/Net-Core-React/empresa-administrador-netcore-react/empresa-administrador-api/Views/JobTitles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVGl0bGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Numbers Tech/Desktop/Net-Core-React/empresa-administrador-netcore-react/empresa-administrador-api/Views/JobTitles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVGl0bGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Numbers Tech/Desktop/Net-Core-React/empresa-administrador-netcore-react/empresa-administrador-api/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

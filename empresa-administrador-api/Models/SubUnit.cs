@@ -8,14 +8,17 @@ using System.Threading.Tasks;
 
 namespace empresa_administrador_api.Models
 {
-    public class Nationality : AuditableBaseEntity
+    public class SubUnit : AuditableBaseEntity
     {
 
-        [Column(TypeName = "VARCHAR(100)")]
+        [Column(TypeName = "VARCHAR(50)")]
         public string Name { get; set; }
 
-        public int EmployeeId { get; set; }
-        public Employee Employees { get; set; }
+        [Column(TypeName = "VARCHAR(100)")]
+        public string Description { get; set; }
+
+        public ICollection<Employee> Employees { get; set; }
+
 
     }
 }
