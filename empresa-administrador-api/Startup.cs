@@ -29,15 +29,24 @@ namespace empresa_administrador_api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers().AddNewtonsoftJson();
+            services.AddAutoMapper(typeof(Program));
+
+            services.AddControllers(opt =>
+            {
+                opt.Filters.Add(new ProducesAttribute("application/json"));
+            }).ConfigureApiBehaviorOptions(opt =>
+            {
+                opt.SuppressInferBindingSourcesForParameters = true;
+                opt.SuppressMapClientErrors = true;
+            }).AddNewtonsoftJson(options =>
+                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+             );
 
             services.AddSwaggerGen(c =>
             {
                 c.EnableAnnotations();
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Administrador de Empresas", Version = "v1" });
             });
-
-            services.AddControllers();
 
             services.AddDbContext<EmpresaDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
             services.AddCors(options =>

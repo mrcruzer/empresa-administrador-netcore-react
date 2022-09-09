@@ -38,7 +38,7 @@ namespace empresa_administrador_api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Educations");
+                    b.ToTable("Educations", (string)null);
                 });
 
             modelBuilder.Entity("empresa_administrador_api.Models.Employee", b =>
@@ -70,7 +70,7 @@ namespace empresa_administrador_api.Migrations
                     b.Property<string>("Gender")
                         .HasColumnType("VARCHAR(25)");
 
-                    b.Property<int?>("JobCategoryId")
+                    b.Property<int>("JobCategoryId")
                         .HasColumnType("int");
 
                     b.Property<int>("JobTitleId")
@@ -121,7 +121,7 @@ namespace empresa_administrador_api.Migrations
 
                     b.HasIndex("SkillId");
 
-                    b.ToTable("Employees");
+                    b.ToTable("Employees", (string)null);
                 });
 
             modelBuilder.Entity("empresa_administrador_api.Models.EmploymentStatus", b =>
@@ -140,7 +140,7 @@ namespace empresa_administrador_api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("EmploymentStatus");
+                    b.ToTable("EmploymentStatus", (string)null);
                 });
 
             modelBuilder.Entity("empresa_administrador_api.Models.JobCategory", b =>
@@ -155,11 +155,13 @@ namespace empresa_administrador_api.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
-                        .HasColumnType("VARCHAR(100)");
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("JobCategories");
+                    b.ToTable("JobCategories", (string)null);
                 });
 
             modelBuilder.Entity("empresa_administrador_api.Models.JobTitle", b =>
@@ -175,8 +177,8 @@ namespace empresa_administrador_api.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -185,7 +187,7 @@ namespace empresa_administrador_api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("JobTitles");
+                    b.ToTable("JobTitles", (string)null);
                 });
 
             modelBuilder.Entity("empresa_administrador_api.Models.Language", b =>
@@ -204,7 +206,7 @@ namespace empresa_administrador_api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Languages");
+                    b.ToTable("Languages", (string)null);
                 });
 
             modelBuilder.Entity("empresa_administrador_api.Models.License", b =>
@@ -223,7 +225,7 @@ namespace empresa_administrador_api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Licenses");
+                    b.ToTable("Licenses", (string)null);
                 });
 
             modelBuilder.Entity("empresa_administrador_api.Models.Nationality", b =>
@@ -239,11 +241,12 @@ namespace empresa_administrador_api.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Nationalities");
+                    b.ToTable("Nationalities", (string)null);
                 });
 
             modelBuilder.Entity("empresa_administrador_api.Models.PayGrade", b =>
@@ -265,7 +268,7 @@ namespace empresa_administrador_api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PayGrades");
+                    b.ToTable("PayGrades", (string)null);
                 });
 
             modelBuilder.Entity("empresa_administrador_api.Models.Skill", b =>
@@ -287,7 +290,7 @@ namespace empresa_administrador_api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Skills");
+                    b.ToTable("Skills", (string)null);
                 });
 
             modelBuilder.Entity("empresa_administrador_api.Models.Employee", b =>
@@ -296,9 +299,11 @@ namespace empresa_administrador_api.Migrations
                         .WithMany("Employees")
                         .HasForeignKey("EmploymentStatusId");
 
-                    b.HasOne("empresa_administrador_api.Models.JobCategory", null)
+                    b.HasOne("empresa_administrador_api.Models.JobCategory", "JobCategory")
                         .WithMany("Employees")
-                        .HasForeignKey("JobCategoryId");
+                        .HasForeignKey("JobCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("empresa_administrador_api.Models.JobTitle", "JobTitle")
                         .WithMany("Employees")
@@ -327,6 +332,8 @@ namespace empresa_administrador_api.Migrations
                     b.HasOne("empresa_administrador_api.Models.Skill", null)
                         .WithMany("Employees")
                         .HasForeignKey("SkillId");
+
+                    b.Navigation("JobCategory");
 
                     b.Navigation("JobTitle");
 
