@@ -10619,9 +10619,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Numbers Tech\\Desktop\\Net-Core-React\\empresa-administrador-netcore-react\\empresa-administrador-api\\empresa-administrador-api.csproj",
-      "projectName": "empresa-administrador-api",
-      "projectPath": "C:\\Users\\Numbers Tech\\Desktop\\Net-Core-React\\empresa-administrador-netcore-react\\empresa-administrador-api\\empresa-administrador-api.csproj",
+      "projectUniqueName": "C:\\Users\\Numbers Tech\\Desktop\\Net-Core-React\\empresa-administrador-netcore-react\\empresa-administrador-api\\EmpresaAdministrador.Presentation.WebApi.csproj",
+      "projectName": "EmpresaAdministrador.Presentation.WebApi",
+      "projectPath": "C:\\Users\\Numbers Tech\\Desktop\\Net-Core-React\\empresa-administrador-netcore-react\\empresa-administrador-api\\EmpresaAdministrador.Presentation.WebApi.csproj",
       "packagesPath": "C:\\Users\\Numbers Tech\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Numbers Tech\\Desktop\\Net-Core-React\\empresa-administrador-netcore-react\\empresa-administrador-api\\obj\\",
       "projectStyle": "PackageReference",

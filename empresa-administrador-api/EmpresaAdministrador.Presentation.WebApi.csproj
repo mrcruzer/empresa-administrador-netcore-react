@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>EmpresaAdministrador</RootNamespace>
+    <UserSecretsId>06d28c50-3800-4e60-8083-42606733fe18</UserSecretsId>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="EmpresaAdministrador.Core.Application\**" />
+    <Compile Remove="EmpresaAdministrador.Core.Domain\**" />
+    <Compile Remove="EmpresaAdministrador.Infrastructure.Identity\**" />
+    <Compile Remove="EmpresaAdministrador.Infrastructure.Persistence\**" />
+    <Compile Remove="EmpresaAdministradorApi.Core.Application\**" />
+    <Compile Remove="EmpresaAdministradorApi.Core.Domain\**" />
+    <Content Remove="EmpresaAdministrador.Core.Application\**" />
+    <Content Remove="EmpresaAdministrador.Core.Domain\**" />
+    <Content Remove="EmpresaAdministrador.Infrastructure.Identity\**" />
+    <Content Remove="EmpresaAdministrador.Infrastructure.Persistence\**" />
+    <Content Remove="EmpresaAdministradorApi.Core.Application\**" />
+    <Content Remove="EmpresaAdministradorApi.Core.Domain\**" />
+    <EmbeddedResource Remove="EmpresaAdministrador.Core.Application\**" />
+    <EmbeddedResource Remove="EmpresaAdministrador.Core.Domain\**" />
+    <EmbeddedResource Remove="EmpresaAdministrador.Infrastructure.Identity\**" />
+    <EmbeddedResource Remove="EmpresaAdministrador.Infrastructure.Persistence\**" />
+    <EmbeddedResource Remove="EmpresaAdministradorApi.Core.Application\**" />
+    <EmbeddedResource Remove="EmpresaAdministradorApi.Core.Domain\**" />
+    <None Remove="EmpresaAdministrador.Core.Application\**" />
+    <None Remove="EmpresaAdministrador.Core.Domain\**" />
+    <None Remove="EmpresaAdministrador.Infrastructure.Identity\**" />
+    <None Remove="EmpresaAdministrador.Infrastructure.Persistence\**" />
+    <None Remove="EmpresaAdministradorApi.Core.Application\**" />
+    <None Remove="EmpresaAdministradorApi.Core.Domain\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.IISIntegration" Version="2.2.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore" Version="6.0.8" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".circleci\config.yml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
+
+</Project>

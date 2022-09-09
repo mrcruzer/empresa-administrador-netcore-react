@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Baq+UuL0Seyi/qi6oLfmFA/oq8YZHPu8QJnmyP/oVjXiRN9fJYIUPRSpQtMxgukO9Kt3LG5OuB0czTTaA0GYew==",
+  "dgSpecHash": "EhfHxIjTn4CbdqyT5SQq2M4EOif0mkmDrx1nrF4dqRGb//a6pWK++vRkfkSbBLayM8MJ0stCUkjlhGFj4QIjKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Numbers Tech\\Desktop\\Net-Core-React\\empresa-administrador-netcore-react\\empresa-administrador-api\\empresa-administrador-api.csproj",
+  "projectFilePath": "C:\\Users\\Numbers Tech\\Desktop\\Net-Core-React\\empresa-administrador-netcore-react\\empresa-administrador-api\\EmpresaAdministrador.Presentation.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Numbers Tech\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Numbers Tech\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
