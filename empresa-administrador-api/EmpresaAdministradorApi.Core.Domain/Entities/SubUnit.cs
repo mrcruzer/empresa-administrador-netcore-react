@@ -1,4 +1,4 @@
-﻿using empresa_administrador_api.Models.Common;
+﻿using EmpresaAdministradorApi.Core.Domain.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -6,16 +6,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace empresa_administrador_api.Models
+namespace EmpresaAdministradorApi.Core.Domain.Entities
 {
-    public class JobTitle : AuditableBaseEntity
+    public class SubUnit : AuditableBaseEntity
     {
-        [Required]
-        [MaxLength(50)]
+
+        [Column(TypeName = "VARCHAR(50)")]
         public string Name { get; set; }
 
-        [Required]
-        [MaxLength(100)]
+        [Column(TypeName = "VARCHAR(100)")]
         public string Description { get; set; }
 
         public ICollection<Employee> Employees { get; set; }

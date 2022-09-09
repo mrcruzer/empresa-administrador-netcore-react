@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EmpresaAdministradorApi.Core.Domain
+namespace EmpresaAdministradorApi.Core.Domain.Common
 {
     public abstract class AuditableBaseEntity
     {

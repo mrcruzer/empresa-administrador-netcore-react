@@ -1,4 +1,4 @@
-﻿using empresa_administrador_api.Models.Common;
+﻿using EmpresaAdministradorApi.Core.Domain.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace empresa_administrador_api.Models
 {
-    public class Language : AuditableBaseEntity
+    public class License : AuditableBaseEntity
     {
-        
+       
+
         [Column(TypeName = "VARCHAR(50)")]
         public string Name { get; set; }
 
