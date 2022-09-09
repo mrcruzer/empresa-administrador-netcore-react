@@ -9,6 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="EmpresaAdministradorApi.Core.Application\**" />
+    <Compile Remove="EmpresaAdministradorApi.Core.Domain\**" />
+    <Content Remove="EmpresaAdministradorApi.Core.Application\**" />
+    <Content Remove="EmpresaAdministradorApi.Core.Domain\**" />
+    <EmbeddedResource Remove="EmpresaAdministradorApi.Core.Application\**" />
+    <EmbeddedResource Remove="EmpresaAdministradorApi.Core.Domain\**" />
+    <None Remove="EmpresaAdministradorApi.Core.Application\**" />
+    <None Remove="EmpresaAdministradorApi.Core.Domain\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="11.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="MediatR" Version="10.0.1" />
