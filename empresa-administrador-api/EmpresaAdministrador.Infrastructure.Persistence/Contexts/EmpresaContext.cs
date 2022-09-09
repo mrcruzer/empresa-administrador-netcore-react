@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace EmpresaAdministrador.Infrastructure.Persistence.Contexts
 {
-    public class EmpresaDbContext : DbContext
+    public class EmpresaContext : DbContext
     {
-        public EmpresaDbContext(DbContextOptions<EmpresaDbContext> options)
+        public EmpresaContext(DbContextOptions<EmpresaContext> options)
             : base(options)
         { }
 

@@ -1,4 +1,4 @@
-﻿namespace EmpresaAdministradorApi.Core.Application.Dtos.API.Nationality
+﻿namespace EmpresaAdministrador.Core.Application.Dtos.API.Nationality
 {
     public class NationalityResponse
     {

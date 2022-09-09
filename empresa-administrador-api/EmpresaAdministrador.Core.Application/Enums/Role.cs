@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmpresaAdministrador.Core.Application.Enums
 {
-    public enum Role
+    public enum Roles
     {
         Admin
     }

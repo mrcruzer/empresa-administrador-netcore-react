@@ -1,4 +1,4 @@
-﻿using EmpresaAdministradorApi.Core.Domain.Common;
+﻿using EmpresaAdministrador.Core.Domain.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

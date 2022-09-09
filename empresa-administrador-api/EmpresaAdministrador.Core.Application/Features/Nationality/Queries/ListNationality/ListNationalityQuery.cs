@@ -9,11 +9,9 @@ using System.Threading.Tasks;
 namespace EmpresaAdministrador.Core.Application.Features.Nationality.Queries.ListNationality
 {
 
-    
-
     public class ListNationalityQuery:IRequest<IList<NationalityResponse>>
     {
-        private readonly EmpresaDbContext _context;
+      
     }
 
     public class ListNationalityQueryHandler : IRequestHandler<ListNationalityQuery, IList<NationalityResponse>>

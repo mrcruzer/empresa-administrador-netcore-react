@@ -1,6 +1,8 @@
-﻿namespace EmpresaAdministrador.Core.Application.Features.Nationality.Commands.DeleteNationality
+﻿using MediatR;
+
+namespace EmpresaAdministrador.Core.Application.Features.Nationality.Commands.DeleteNationality
 {
-    public class DeleteNationalityCommand
+    public class DeleteNationalityCommand : IRequest<bool>
     {
     }
 }

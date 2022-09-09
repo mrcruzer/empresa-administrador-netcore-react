@@ -1,0 +1,5 @@
+C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Core.Application\obj\Debug\net6.0\EmpresaAdministrador.Core.Application.csproj.AssemblyReference.cache
+C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Core.Application\obj\Debug\net6.0\EmpresaAdministrador.Core.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Core.Application\obj\Debug\net6.0\EmpresaAdministrador.Core.Application.AssemblyInfoInputs.cache
+C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Core.Application\obj\Debug\net6.0\EmpresaAdministrador.Core.Application.AssemblyInfo.cs
+C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Core.Application\obj\Debug\net6.0\EmpresaAdministrador.Core.Application.csproj.CoreCompileInputs.cache

@@ -2,12 +2,12 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using RealEstateApp.Core.Application.Dtos.Account;
-using RealEstateApp.Core.Application.Enums;
-using RealEstateApp.Core.Application.Interfaces.Services;
-using RealEstateApp.Core.Application.ViewModels.User;
-using RealEstateApp.Core.Domain.Settings;
-using RealEstateApp.Infrastructure.Identity.Entities;
+using EmpresaAdministrador.Core.Application.Dtos.Account;
+using EmpresaAdministrador.Core.Application.Enums;
+using EmpresaAdministrador.Core.Application.Interfaces.Services;
+using EmpresaAdministrador.Core.Application.ViewModels.User;
+using EmpresaAdministrador.Core.Domain.Settings;
+using EmpresaAdministrador.Infrastructure.Identity.Entities;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -123,42 +123,7 @@ namespace RealEstateApp.Infrastructure.Identity.Services
             return userDTO.Response;
         }
 
-        public async Task<RegisterResponse> RegisterClientUserAsync(RegisterRequest request)
-        {
-            var userDTO = await RegisterUserAsync(request);
-
-            if (!userDTO.Response.HasError)
-            {
-                await _userManager.AddToRoleAsync((AppUser)userDTO.User, Roles.Client.ToString());
-            }
-
-            return userDTO.Response;
-        }
-
-        public async Task<RegisterResponse> RegisterAgentUserAsync(RegisterRequest request)
-        {
-            var userDTO = await RegisterUserAsync(request);
-
-            if (!userDTO.Response.HasError)
-            {
-                await _userManager.AddToRoleAsync((AppUser)userDTO.User, Roles.Agent.ToString());
-            }
-
-            return userDTO.Response;
-        }
-
-        public async Task<RegisterResponse> RegisterDeveloperAsync(RegisterRequest request)
-        {
-            var userDTO = await RegisterUserAsync(request);
-
-            if (!userDTO.Response.HasError)
-            {
-                await _userManager.AddToRoleAsync((AppUser)userDTO.User, Roles.Developer.ToString());
-            }
-
-            return userDTO.Response;
-        }
-
+       
         public async Task<RegisterResponse> UpdateUserAsync(RegisterRequest request)
         {
             RegisterResponse response = new();
@@ -202,7 +167,6 @@ namespace RealEstateApp.Infrastructure.Identity.Services
             user.UserName = request.UserName;
             user.Email = request.Email;
             user.DNI = request.DNI;
-            user.ImgUrl = request.ImgUrl;
 
             IdentityResult result = await _userManager.UpdateAsync(user);
             IdentityResult passResult = null;
@@ -242,7 +206,6 @@ namespace RealEstateApp.Infrastructure.Identity.Services
                 Phone = user.PhoneNumber,
                 UserName = user.UserName,
                 IsActive = user.EmailConfirmed,
-                ImgUrl = user.ImgUrl,
                 Role = role
             };
 
@@ -262,7 +225,6 @@ namespace RealEstateApp.Infrastructure.Identity.Services
                 Phone = user.PhoneNumber,
                 UserName = user.UserName,
                 IsActive = user.EmailConfirmed,
-                ImgUrl = user.ImgUrl
             }).ToList();
 
             int counter = 0;
@@ -321,8 +283,7 @@ namespace RealEstateApp.Infrastructure.Identity.Services
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 DNI = request.DNI,
-                PhoneNumber = request.Phone,
-                ImgUrl = request.ImgUrl
+                PhoneNumber = request.Phone
             };
 
             var result = await _userManager.CreateAsync(user, request.Password);

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using RealEstateApp.Core.Application.Enums;
-using RealEstateApp.Infrastructure.Identity.Entities;
+using EmpresaAdministrador.Core.Application.Enums;
+using EmpresaAdministrador.Infrastructure.Identity.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

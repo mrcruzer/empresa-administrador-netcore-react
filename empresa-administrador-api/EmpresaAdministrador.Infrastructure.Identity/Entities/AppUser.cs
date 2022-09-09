@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace RealEstateApp.Infrastructure.Identity.Entities
+namespace EmpresaAdministrador.Infrastructure.Identity.Entities
 {
     public class AppUser : IdentityUser
     {

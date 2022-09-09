@@ -1,8 +1,4 @@
-﻿using RealEstateApp.Core.Application.ViewModels.Favorite;
-using RealEstateApp.Core.Application.ViewModels.PropertyImg;
-using RealEstateApp.Core.Application.ViewModels.PropertyType;
-using RealEstateApp.Core.Application.ViewModels.SellType;
-using RealEstateApp.Core.Application.ViewModels.Upgrade;
+﻿using EmpresaAdministrador.Core.Application.ViewModels.Nationality;
 using System;
 using System.Collections.Generic;
 using System.Linq;

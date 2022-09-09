@@ -2,6 +2,7 @@
 using EmpresaAdministrador.Core.Application.Dtos.API.Nationality;
 using EmpresaAdministrador.Core.Application.Features.Nationality.Commands.CreateNationality;
 using EmpresaAdministrador.Core.Application.Features.Nationality.Commands.UpdateNationality;
+using EmpresaAdministrador.Core.Application.ViewModels.Nationality;
 using EmpresaAdministrador.Core.Domain.Entities;
 
 namespace EmpresaAdministrador.Core.Application.Mappings

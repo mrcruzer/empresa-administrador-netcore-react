@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmpresaAdministrador.Core.Application.ViewModels.User
+namespace EmpresaAdministrador.Core.Application.ViewModels.User 
+{ 
     public class RoleViewModel
     {
         public string Id { get; set; }

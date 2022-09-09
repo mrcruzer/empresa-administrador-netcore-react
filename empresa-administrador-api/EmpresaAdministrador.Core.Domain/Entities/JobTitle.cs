@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EmpresaAdministradorApi.Core.Domain.Entities
+namespace EmpresaAdministrador.Core.Domain.Entities
 {
     public class JobTitle : AuditableBaseEntity
     {

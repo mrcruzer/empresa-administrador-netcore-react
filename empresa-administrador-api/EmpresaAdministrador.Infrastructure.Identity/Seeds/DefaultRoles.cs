@@ -13,7 +13,6 @@ namespace EmpresaAdministrador.Infrastructure.Identity.Seeds
         public static async Task SeedsAsync(RoleManager<IdentityRole> roleManager)
         {
             await roleManager.CreateAsync(new IdentityRole(Roles.Admin.ToString()));
-            await roleManager.CreateAsync(new IdentityRole(Roles.Employee.ToString()));
       
         }
     }
