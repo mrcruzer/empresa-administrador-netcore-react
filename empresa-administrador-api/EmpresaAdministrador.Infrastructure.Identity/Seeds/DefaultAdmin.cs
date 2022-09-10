@@ -30,7 +30,7 @@ namespace EmpresaAdministrador.Infrastructure.Identity.Seeds
 
                 if (user == null)
                 {
-                    await userManager.CreateAsync(defaultUser, "Pa$$word123!");
+                    await userManager.CreateAsync(defaultUser, "certificado14");
                     await userManager.AddToRoleAsync(defaultUser, Roles.Admin.ToString());
                 }
             }

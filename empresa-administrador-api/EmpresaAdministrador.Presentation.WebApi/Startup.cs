@@ -13,9 +13,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EmpresaAdministrador.Infrastructure.Persistence;
+using EmpresaAdministrador.Infrastructure.Identity;
 using RealEstateApp.Infrastructure.Identity;
 
-namespace RealEstateApp.Presentation.WebApi
+namespace EmpresaAdministrador.Presentation.WebApi
 {
     public class Startup
     {

@@ -38,7 +38,7 @@ namespace RealEstateApp.Infrastructure.Identity
 
             services.Configure<JWTSettings>(configuration.GetSection("JWTSettings"));
 
-            services.AddAuthentication(opt =>
+            /*services.AddAuthentication(opt =>
             {
                 opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -82,7 +82,7 @@ namespace RealEstateApp.Infrastructure.Identity
                         return c.Response.WriteAsync(result);
                     }
                 };
-            });
+            });*/
             #endregion
 
             #region Database
