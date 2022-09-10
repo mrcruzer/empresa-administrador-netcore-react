@@ -3,3 +3,10 @@ C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react
 C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Core.Domain\obj\Debug\net6.0\EmpresaAdministrador.Core.Domain.AssemblyInfoInputs.cache
 C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Core.Domain\obj\Debug\net6.0\EmpresaAdministrador.Core.Domain.AssemblyInfo.cs
 C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Core.Domain\obj\Debug\net6.0\EmpresaAdministrador.Core.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Core.Domain\bin\Debug\net6.0\EmpresaAdministrador.Core.Domain.deps.json
+C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Core.Domain\bin\Debug\net6.0\EmpresaAdministrador.Core.Domain.dll
+C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Core.Domain\bin\Debug\net6.0\EmpresaAdministrador.Core.Domain.pdb
+C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Core.Domain\obj\Debug\net6.0\EmpresaAdministrador.Core.Domain.dll
+C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Core.Domain\obj\Debug\net6.0\refint\EmpresaAdministrador.Core.Domain.dll
+C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Core.Domain\obj\Debug\net6.0\EmpresaAdministrador.Core.Domain.pdb
+C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Core.Domain\obj\Debug\net6.0\ref\EmpresaAdministrador.Core.Domain.dll

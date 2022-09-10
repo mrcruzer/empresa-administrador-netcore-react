@@ -13,7 +13,7 @@ namespace RealEstateApp.Presentation.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [SwaggerTag("Autenticar usuarios y crear nuevos Developers y Admins")]
+    [SwaggerTag("Autenticar usuarios y crear nuevos Usuarios")]
     public class UserController : ControllerBase
     {
         private readonly IAccountService _accountService;
@@ -36,31 +36,7 @@ namespace RealEstateApp.Presentation.WebApi.Controllers
             return Ok(await _accountService.LoginAsync(request));
         }
 
-        [Authorize(Roles = "Admin")]
-        [HttpPost("RegisterDeveloper")]
-        [Consumes(MediaTypeNames.Application.Json)]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        [SwaggerOperation(
-            Summary = "Crea un nuevo admin",
-            Description = "Crea un nuevo usuario con el rol de administrador con los datos suministrados"
-            )]
-        public async Task<IActionResult> RegisterWaiter([FromBody] RegisterRequest request)
-        {
-            try
-            {
-                var user = await _accountService.RegisterDeveloperAsync(request);
-                if (user == null)
-                {
-                    return StatusCode(StatusCodes.Status500InternalServerError);
-                }
-                return NoContent();
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-            }
-        }
+        
 
         [Authorize(Roles = "Admin")]
         [HttpPost("RegisterAdmin")]
@@ -68,8 +44,8 @@ namespace RealEstateApp.Presentation.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [SwaggerOperation(
-            Summary = "Crea un nuevo developer",
-            Description = "Crea un nuevo usuario con el rol de developer con los datos suministrados"
+            Summary = "Crea un nuevo Admin",
+            Description = "Crea un nuevo usuario con el rol de Admin con los datos suministrados"
             )]
         public async Task<IActionResult> RegisterAdminAsync([FromBody] RegisterRequest request)
         {

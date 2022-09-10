@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "8W3LeVZyg7FrSnYkGAp5mxHEXyTva6a8Giq2Io+XFxE=",
+  "Source": "EmpresaAdministrador.Presentation.WebApi",
+  "BasePath": "_content/EmpresaAdministrador.Presentation.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

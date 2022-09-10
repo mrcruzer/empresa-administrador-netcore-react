@@ -22,4 +22,5 @@
     <ProjectReference Include="..\EmpresaAdministrador.Core.Domain\EmpresaAdministrador.Core.Domain.csproj" />
   </ItemGroup>
 
+
 </Project>

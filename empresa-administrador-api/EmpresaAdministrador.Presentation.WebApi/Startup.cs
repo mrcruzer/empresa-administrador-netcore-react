@@ -12,6 +12,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EmpresaAdministrador.Infrastructure.Persistence;
+using RealEstateApp.Infrastructure.Identity;
 
 namespace RealEstateApp.Presentation.WebApi
 {
@@ -29,7 +31,7 @@ namespace RealEstateApp.Presentation.WebApi
         {
             services.AddPersistenceLayer(Configuration);
             services.AddIdentityLayer(Configuration);
-            services.AddApplicationLayer(Configuration);
+            //services.AddApplicationLayer(Configuration);
             services.AddSwaggerExtension();
             services.AddApiVersioningExtension();
 
