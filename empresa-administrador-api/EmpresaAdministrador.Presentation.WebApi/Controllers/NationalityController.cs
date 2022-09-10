@@ -17,7 +17,7 @@ namespace EmpresaAdministrador.Presentation.WebApi.Controllers
 {
     //[ApiVersion("1.0")]
     
-    [SwaggerTag("Mantenimiento de Tipos de Propiedades")]
+    [SwaggerTag("Mantenimiento de Nacionalidades de Empleados")]
     public class NationalityController : BaseApiController
     {
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

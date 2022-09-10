@@ -18,7 +18,7 @@ namespace EmpresaAdministrador.Infrastructure.Persistence
         {
             service.AddDbContext<EmpresaContext>(
                 opt => opt.UseSqlServer(
-                    configuration.GetConnectionString("RealEstateConnection"),
+                    configuration.GetConnectionString("EmpresaConnection"),
                     migration => migration.MigrationsAssembly(typeof(EmpresaContext).Assembly.FullName)));
 
             #region Dependency Injections
