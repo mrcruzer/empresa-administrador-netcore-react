@@ -17,7 +17,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 
-namespace RealEstateApp.Infrastructure.Identity.Services
+namespace EmpresaAdministrador.Infrastructure.Identity.Services
 {
     public class AccountService : IAccountService
     {

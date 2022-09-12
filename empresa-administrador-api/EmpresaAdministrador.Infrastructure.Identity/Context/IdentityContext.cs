@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmpresaAdministrador.Infrastructure.Identity.Context
+namespace EmpresaAdministrador.Infrastructure.Identity
 {
     public class IdentityContext : IdentityDbContext<AppUser>
     {

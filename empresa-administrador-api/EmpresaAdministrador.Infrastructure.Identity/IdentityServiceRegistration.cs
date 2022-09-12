@@ -1,25 +1,13 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.IdentityModel.Tokens;
-using Newtonsoft.Json;
-using EmpresaAdministrador.Core.Application.Dtos.Account;
 using EmpresaAdministrador.Core.Application.Interfaces.Services;
 using EmpresaAdministrador.Core.Domain.Settings;
-using EmpresaAdministrador.Infrastructure.Identity.Context;
 using EmpresaAdministrador.Infrastructure.Identity.Entities;
 using EmpresaAdministrador.Infrastructure.Identity.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RealEstateApp.Infrastructure.Identity.Services;
 
-namespace RealEstateApp.Infrastructure.Identity
+namespace EmpresaAdministrador.Infrastructure.Identity
 {
     public static class IdentityServiceRegistration
     {

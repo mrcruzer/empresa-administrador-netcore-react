@@ -162,3 +162,4 @@ C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react
 C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Presentation.WebApi\obj\Debug\net6.0\EmpresaAdministrador.Presentation.WebApi.pdb
 C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Presentation.WebApi\obj\Debug\net6.0\EmpresaAdministrador.Presentation.WebApi.genruntimeconfig.cache
 C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Presentation.WebApi\obj\Debug\net6.0\ref\EmpresaAdministrador.Presentation.WebApi.dll
+C:\Users\Numbers Tech\Desktop\Net-Core-React\empresa-administrador-netcore-react\empresa-administrador-api\EmpresaAdministrador.Presentation.WebApi\obj\Debug\net6.0\EmpresaAdministrador.Presentation.WebApi.MvcApplicationPartsAssemblyInfo.cs
