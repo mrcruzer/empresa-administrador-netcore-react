@@ -38,7 +38,7 @@ namespace RealEstateApp.Presentation.WebApi.Controllers
 
         
 
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpPost("RegisterAdmin")]
         [Consumes(MediaTypeNames.Application.Json)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]

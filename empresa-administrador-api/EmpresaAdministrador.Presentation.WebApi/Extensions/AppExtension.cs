@@ -12,7 +12,7 @@ namespace EmpresaAdministrador.Presentation.WebApi.Extensions
             app.UseSwagger();
             app.UseSwaggerUI(opt =>
             {
-                opt.SwaggerEndpoint("/swagger/swagger.json", "Empresa Administrador Api");
+                opt.SwaggerEndpoint("/swagger/v1/swagger.json", "Empresa Administrador Api");
                 opt.DefaultModelRendering(ModelRendering.Model);
             });
         }

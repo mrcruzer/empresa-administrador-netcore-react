@@ -18,9 +18,9 @@ namespace EmpresaAdministrador.Presentation.WebApi.Extensions
                 List<string> xmlFiles = Directory.GetFiles(AppContext.BaseDirectory, "*.xml", searchOption: SearchOption.TopDirectoryOnly).ToList();
                 xmlFiles.ForEach(xmlFile => opt.IncludeXmlComments(xmlFile));
 
-                opt.SwaggerDoc("v2", new OpenApiInfo
+                opt.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Version = "v2",
+                    Version = "v1",
                     Title = "Empresa Administrador Api",
                     Description = "Api para consumir en el frontend, Administracion de empresas",
                     Contact = new OpenApiContact
