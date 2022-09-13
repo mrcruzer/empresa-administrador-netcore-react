@@ -7,13 +7,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using EmpresaAdministrador.Presentation.WebApi.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EmpresaAdministrador.Infrastructure.Persistence;
 using EmpresaAdministrador.Infrastructure.Identity;
+using EmpresaAdministrador.Core.Application;
+using EmpresaAdministrador.Presentation.WebApi.Extensions;
 
 namespace EmpresaAdministrador.Presentation.WebApi
 {
@@ -32,7 +33,7 @@ namespace EmpresaAdministrador.Presentation.WebApi
             services.AddPersistenceLayer(Configuration);
             services.AddIdentityLayer(Configuration);
             services.AddDbContext<IdentityContext>();
-            //services.AddApplicationLayer(Configuration);
+            services.AddApplicationLayer(Configuration);
             services.AddSwaggerExtension();
             services.AddApiVersioningExtension();
 

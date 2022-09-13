@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using RealEstateApp.Presentation.WebApi.Controllers;
 using Swashbuckle.AspNetCore.Annotations;
 using System;
+using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
 
@@ -104,7 +105,7 @@ namespace EmpresaAdministrador.Presentation.WebApi.Controllers
             {
                 var response = await Mediator.Send(new ListNationalityQuery());
 
-                if (response == null || response.Count == 0)
+                if (response == null || response.Count() == 0)
                     return NotFound();
 
                 return Ok(response);
