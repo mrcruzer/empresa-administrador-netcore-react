@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+﻿/*using AutoMapper;
 using EmpresaAdministrador.Core.Application.Interfaces.Repositories;
 using EmpresaAdministrador.Core.Application.Interfaces.Services;
 using System.Collections.Generic;
@@ -53,4 +53,4 @@ namespace EmpresaAdministrador.Core.Application.Services
             await _repository.DeleteAsync(t);
         }
     }
-}
+}*/

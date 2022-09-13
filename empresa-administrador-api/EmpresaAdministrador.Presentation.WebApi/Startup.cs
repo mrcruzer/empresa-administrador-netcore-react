@@ -15,6 +15,7 @@ using EmpresaAdministrador.Infrastructure.Persistence;
 using EmpresaAdministrador.Infrastructure.Identity;
 using EmpresaAdministrador.Core.Application;
 using EmpresaAdministrador.Presentation.WebApi.Extensions;
+using MediatR;
 
 namespace EmpresaAdministrador.Presentation.WebApi
 {
@@ -35,6 +36,9 @@ namespace EmpresaAdministrador.Presentation.WebApi
             services.AddApplicationLayer(Configuration);
             services.AddSwaggerExtension();
             services.AddApiVersioningExtension();
+
+            //services.AddMediatR(typeof(Startup));
+
 
             services.AddControllers(opt =>
             {

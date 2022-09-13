@@ -18,7 +18,7 @@ namespace EmpresaAdministrador.Presentation.WebApi
     {
         public static async Task Main(string[] args)
         {
-            var host = CreateHostBuilder(args).Build();
+            var host = CreateHostBuilder(args: args).Build();
 
             using (var scope = host.Services.CreateScope())
             {
@@ -45,7 +45,8 @@ namespace EmpresaAdministrador.Presentation.WebApi
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder
+                        .UseStartup<Startup>();
                 });
     }
 }

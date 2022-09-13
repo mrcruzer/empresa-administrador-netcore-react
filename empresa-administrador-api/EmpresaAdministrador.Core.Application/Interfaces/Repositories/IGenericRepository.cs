@@ -14,9 +14,10 @@ namespace EmpresaAdministrador.Core.Application.Interfaces.Repositories
         Task<List<Entity>> GetAllAsync();
         
 
-        //Task<List<Entity>> GetAllWithIncludes(List<string> props);
+        Task<List<Entity>> GetAllWithIncludes(List<string> props);
         Task<Entity> GetByIdAsync(int id);
-        //Task<Entity> GetByIdWithIncludes(int id, List<string> props, List<string> colls);
+
+        Task<Entity> GetByIdWithIncludes(int id, List<string> props, List<string> colls);
         Task UpdateAsync(Entity t, int id);
     }
 }

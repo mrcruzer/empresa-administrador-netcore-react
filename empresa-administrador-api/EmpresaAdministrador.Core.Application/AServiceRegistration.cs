@@ -1,5 +1,5 @@
 ﻿using EmpresaAdministrador.Core.Application.Interfaces.Services;
-using EmpresaAdministrador.Core.Application.Services;
+//using EmpresaAdministrador.Core.Application.Services;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,8 +20,8 @@ namespace EmpresaAdministrador.Core.Application
             services.AddMediatR(Assembly.GetExecutingAssembly());
 
             #region dependency injections
-            services.AddTransient(typeof(IGenericService<,>), typeof(GenericService<,,>));
-            services.AddTransient<INationalityService, NationalityService>();
+            /*services.AddTransient(typeof(IGenericService<,>), typeof(GenericService<,,>));
+            services.AddTransient<INationalityService, NationalityService>();*/
             //services.AddTransient<IUserService, UserService>();
             #endregion
         }

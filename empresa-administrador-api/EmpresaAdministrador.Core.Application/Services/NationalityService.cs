@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+﻿/*using AutoMapper;
 using Microsoft.AspNetCore.Http; 
 //using EmpresaAdministradorApi.Core.Application.Dtos.Account;
 using EmpresaAdministrador.Core.Application.Interfaces.Repositories;
@@ -35,4 +35,4 @@ namespace EmpresaAdministrador.Core.Application.Services
             return viewModelList;
         }
     }
-}
+}*/
