@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using EmpresaAdministrador.Core.Application.Dtos.API.Nationality;
-using EmpresaAdministrador.Core.Application.Features.Nationality.Commands.CreateNationality;
-using EmpresaAdministrador.Core.Application.Features.Nationality.Commands.UpdateNationality;
+using EmpresaAdministrador.Core.Application.Features.Nationalities.Commands.CreateNationality;
+using EmpresaAdministrador.Core.Application.Features.Nationalities.Commands.UpdateNationality;
 using EmpresaAdministrador.Core.Application.ViewModels.Nationality;
 using EmpresaAdministrador.Core.Domain.Entities;
 

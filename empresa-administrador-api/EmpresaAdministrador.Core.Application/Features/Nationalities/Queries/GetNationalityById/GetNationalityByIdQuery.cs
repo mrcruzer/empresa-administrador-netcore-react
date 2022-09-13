@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace EmpresaAdministrador.Core.Application.Features.Nationality.Queries.GetNationalityById
+namespace EmpresaAdministrador.Core.Application.Features.Nationalities.Queries.GetNationalityById
 {
     public class GetNationalityByIdQuery:IRequest<NationalityResponse>
     {

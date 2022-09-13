@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace EmpresaAdministrador.Core.Application.Features.Nationality.Queries.ListNationality
+namespace EmpresaAdministrador.Core.Application.Features.Nationalities.Queries.ListNationality
 {
 
     public class ListNationalityQuery:IRequest<IList<NationalityResponse>>

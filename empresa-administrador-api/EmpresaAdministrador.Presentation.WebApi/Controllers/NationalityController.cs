@@ -1,9 +1,9 @@
 ﻿using EmpresaAdministrador.Core.Application.Dtos.API.Nationality;
-using EmpresaAdministrador.Core.Application.Features.Nationality.Commands.CreateNationality;
-using EmpresaAdministrador.Core.Application.Features.Nationality.Commands.DeleteNationality;
-using EmpresaAdministrador.Core.Application.Features.Nationality.Commands.UpdateNationality;
-using EmpresaAdministrador.Core.Application.Features.Nationality.Queries.GetNationalityById;
-using EmpresaAdministrador.Core.Application.Features.Nationality.Queries.ListNationality;
+using EmpresaAdministrador.Core.Application.Features.Nationalities.Commands.CreateNationality;
+using EmpresaAdministrador.Core.Application.Features.Nationalities.Commands.DeleteNationality;
+using EmpresaAdministrador.Core.Application.Features.Nationalities.Commands.UpdateNationality;
+using EmpresaAdministrador.Core.Application.Features.Nationalities.Queries.GetNationalityById;
+using EmpresaAdministrador.Core.Application.Features.Nationalities.Queries.ListNationality;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -24,7 +24,6 @@ namespace EmpresaAdministrador.Presentation.WebApi.Controllers
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /*//[Authorize(Roles = "Admin")]
          [HttpPost("Create")]
          [Consumes(MediaTypeNames.Application.Json)]
          [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -52,12 +51,12 @@ namespace EmpresaAdministrador.Presentation.WebApi.Controllers
              {
                  return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
              }
-         }*/
+         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /*//[Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpPut("Update")]
         [Consumes(MediaTypeNames.Application.Json)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(NationalityResponse))]
@@ -86,7 +85,7 @@ namespace EmpresaAdministrador.Presentation.WebApi.Controllers
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
-        }*/
+        }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
