@@ -32,7 +32,6 @@ namespace EmpresaAdministrador.Presentation.WebApi
         {
             services.AddPersistenceLayer(Configuration);
             services.AddIdentityLayer(Configuration);
-            services.AddDbContext<IdentityContext>();
             services.AddApplicationLayer(Configuration);
             services.AddSwaggerExtension();
             services.AddApiVersioningExtension();

@@ -70,7 +70,7 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.17, )"
+              "version": "[6.0.8, )"
             },
             "Microsoft.Extensions.Options.ConfigurationExtensions": {
               "target": "Package",
@@ -82,11 +82,11 @@
             },
             "Swashbuckle.AspNetCore.Annotations": {
               "target": "Package",
-              "version": "[6.3.1, )"
+              "version": "[6.4.0, )"
             },
             "System.IO.Abstractions": {
               "target": "Package",
-              "version": "[17.1.1, )"
+              "version": "[17.2.1, )"
             }
           },
           "imports": [
