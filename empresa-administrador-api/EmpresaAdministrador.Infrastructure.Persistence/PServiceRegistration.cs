@@ -24,6 +24,8 @@ namespace EmpresaAdministrador.Infrastructure.Persistence
             #region Dependency Injections
             service.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             service.AddTransient<INationalityRepository, NationalityRepository>();
+            service.AddTransient<IJobTitleRepository, JobTitleRepository>();
+            service.AddTransient<IJobCategoryRepository, JobCategoryRepository>();
             #endregion
         }
     }

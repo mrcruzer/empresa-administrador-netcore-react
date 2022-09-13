@@ -11,7 +11,6 @@ namespace EmpresaAdministrador.Core.Domain.Entities
     public class JobCategory : AuditableBaseEntity
     {
 
-        [Required]
         [MaxLength(100)]
         public string Name { get; set; }
 
