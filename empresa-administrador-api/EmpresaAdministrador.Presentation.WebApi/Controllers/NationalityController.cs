@@ -26,6 +26,7 @@ namespace EmpresaAdministrador.Presentation.WebApi.Controllers
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
          [HttpPost("Create")]
          [Consumes(MediaTypeNames.Application.Json)]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(NationalityResponse))] 
          [ProducesResponseType(StatusCodes.Status204NoContent)]
          [ProducesResponseType(StatusCodes.Status400BadRequest)]
          [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -136,7 +137,7 @@ namespace EmpresaAdministrador.Presentation.WebApi.Controllers
                 });
 
                 if (response == null)
-                    return NotFound();
+                    return NotFound($"No existe la Nacionalidad con el Id '{id}'");
 
                 return Ok(response);
             }
@@ -149,7 +150,7 @@ namespace EmpresaAdministrador.Presentation.WebApi.Controllers
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /*//[Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpDelete("Delete/{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -176,6 +177,6 @@ namespace EmpresaAdministrador.Presentation.WebApi.Controllers
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
-        }*/
+        }
     }
 }
