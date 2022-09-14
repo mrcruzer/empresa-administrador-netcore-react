@@ -22,5 +22,11 @@
     <ProjectReference Include="..\EmpresaAdministrador.Core.Domain\EmpresaAdministrador.Core.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\JobCategories\Commands\" />
+    <Folder Include="Features\JobTitles\Commands\" />
+    <Folder Include="Features\JobTitles\Queries\" />
+  </ItemGroup>
+
 
 </Project>
