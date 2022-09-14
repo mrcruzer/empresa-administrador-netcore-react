@@ -11,10 +11,10 @@ namespace EmpresaAdministrador.Core.Domain.Entities
     public class JobTitle : AuditableBaseEntity
     {
       
-        [MaxLength(50)]
+      //  [MaxLength(50)]
         public string Name { get; set; }
 
-        [MaxLength(100)]
+       // [MaxLength(100)]
         public string Description { get; set; }
 
         public ICollection<Employee> Employees { get; set; }

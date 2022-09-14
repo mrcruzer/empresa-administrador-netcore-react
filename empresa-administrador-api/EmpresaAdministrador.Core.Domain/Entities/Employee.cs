@@ -11,44 +11,51 @@ namespace EmpresaAdministrador.Core.Domain.Entities
     public class Employee : AuditableBaseEntity
     {
 
-        [Column(TypeName = "VARCHAR(100)")]
         public string Name { get; set; }
 
-        [Column(TypeName = "VARCHAR(100)")]
         public string LastName { get; set; }
 
-        [Column(TypeName = "VARCHAR(100)")]
         public string Address { get; set; }
 
-        [Column(TypeName = "VARCHAR(100)")]
+        
         public string City { get; set; }
 
-        [Column(TypeName = "VARCHAR(100)")]
+       
         public string Province { get; set; }
 
-        [Column(TypeName = "VARCHAR(100)")]
+     
         public string Country { get; set; }
 
-
-        [Column(TypeName = "VARCHAR(25)")]
         public string Gender { get; set; }
 
         public long Telephone { get; set; }
 
-        [Column(TypeName = "VARCHAR(100)")]
         public string Email { get; set; }
 
+        // Relations and Navigation Properties
+
+        // Nationality
         public int NationalityId { get; set; }
-        public int JobTitleId { get; set; }
 
-        public int JobCategoryId { get; set; }
-
-        // Relations
         public Nationality Nationality { get; set; }
+
+        // JobTitle
+        public int JobTitleId { get; set; }
 
         public JobTitle JobTitle { get; set; }
 
+        // JobCategory
+
+        public int JobCategoryId { get; set; }  
+
         public JobCategory JobCategory { get; set; }
+
+
+        // Employment Status
+
+        public int EmploymentStatusId { get; set; }
+
+        public EmploymentStatus EmploymentStatus { get; set; }
 
     }
 }

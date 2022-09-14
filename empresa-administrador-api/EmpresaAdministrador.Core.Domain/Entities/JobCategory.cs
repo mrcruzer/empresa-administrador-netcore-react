@@ -11,7 +11,7 @@ namespace EmpresaAdministrador.Core.Domain.Entities
     public class JobCategory : AuditableBaseEntity
     {
 
-        [MaxLength(100)]
+        //[MaxLength(100)]
         public string Name { get; set; }
 
         public ICollection<Employee> Employees { get; set; }

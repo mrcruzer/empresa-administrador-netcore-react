@@ -11,7 +11,7 @@ namespace EmpresaAdministrador.Core.Domain.Entities
     public class Education : AuditableBaseEntity
     {
 
-        [Column(TypeName = "VARCHAR(50)")]
+       // [Column(TypeName = "VARCHAR(50)")]
         public string Name { get; set; }
 
 
