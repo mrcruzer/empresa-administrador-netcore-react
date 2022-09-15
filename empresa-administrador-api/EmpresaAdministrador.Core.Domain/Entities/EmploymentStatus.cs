@@ -11,7 +11,6 @@ namespace EmpresaAdministrador.Core.Domain.Entities
     public class EmploymentStatus : AuditableBaseEntity
     {
 
-        //[Column(TypeName = "VARCHAR(100)")]
         public string Name { get; set; }
 
         public ICollection<Employee> Employees { get; set; }
