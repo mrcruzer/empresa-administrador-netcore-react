@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RealEstateApp.Presentation.WebApi.Controllers;
 using System.Collections.Generic;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -7,7 +8,7 @@ namespace EmpresaAdministrador.Presentation.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class JobTitleController : ControllerBase
+    public class JobTitleController : BaseApiController
     {
         // GET: api/<JobTitleController>
         [HttpGet]
